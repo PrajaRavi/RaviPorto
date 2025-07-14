@@ -1,0 +1,112 @@
+@import "tailwindcss";
+body{
+  overflow-x: hidden;
+}
+.Polymorphism{
+  background:rgba(255,255,255,0.3);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.18);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  padding: 20px;
+}
+.container .left span{
+  line-height: 20px;
+  /* color: red; */
+}
+.web{
+  letter-spacing: 4px;
+}
+.container{
+  position: relative;
+}
+.container::after{
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 2%;
+  background-color: black;
+  bottom: 0;
+
+}
+.big-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  
+  flex-direction: column;
+}
+.shadow{
+  box-shadow: 5px 5px 5px black;
+}
+.shadow1{
+  box-shadow: 0px 0px 5px  black;
+}
+
+
+
+.right1    .container{
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      position: relative;
+      /* border: 2px solid red; */
+    }
+    .right1 .first,.right1 .second,.right1 .third
+    {
+      background-color: black;
+      width: 30px;
+      height: 3px;
+/* transform-origin: top; */
+transition: all 0.4s ease-in-out;
+    }
+    .right1 .first{
+      position: relative;
+      left: 30%;
+      /* transform-origin: top; */
+      transform-style: preserve-3d;
+      transition: all 0.4s ease-in-out;
+      transform-origin: 0 0 ;
+      /* transform: rot; */
+      
+      
+    }
+    .right1 .third{
+      position: relative;
+      left:  30%;
+      transform-origin: 0% 0%;
+    }
+
+    .myname{
+      font-family: cursive;
+    }
+    .html::after,.css::after,.tcss::after,.js::after,.node::after,.react::after,.mongo::after,.python::after,.cpp::after,.angular::after{
+      content: "90%";
+      font-size: 1rem;
+      color: white;
+      background-color: rgba(0,0,0,0.6);
+      backdrop-filter: 10px;
+    }
+
+    .react::after,.node::after,.mongo::after,.angular::after{
+      content: "80%";
+      font-size: 1rem;
+      color: white;
+      background-color: rgba(0,0,0,0.6);
+      backdrop-filter: 10px;
+    }
+    .python::after,.cpp::after{
+      content: "70%";
+      font-size: 1rem;
+      
+      color: white;
+      background-color: rgba(0,0,0,0.6);
+      backdrop-filter: 10px;
+    }
+    .cursor-animation{
+      transition: all 0.001s linear;
+      box-shadow: 0 0 1rem 0.3rem black;
+    }
