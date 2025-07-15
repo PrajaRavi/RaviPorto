@@ -8,9 +8,11 @@ import{CgWebsite} from 'react-icons/cg'
 import {DiMongodb} from "react-icons/di"
 import {RiTailwindCssFill} from 'react-icons/ri'
 import {IoLogoHtml5} from 'react-icons/io5'
+import resume from "../assets/my.pdf"
 import Fotter from './Fotter'
 export default function Home() {
   // let filepath=require("../assets/my.pdf")
+  let fileurl="./my.pdf"
   return (
     <>
     <div className='big-container relative top-[50px]'>
@@ -20,7 +22,8 @@ export default function Home() {
 <span className='md:text-5xl text-3xl myname'>Ravi Prajapati,</span>
 <span className='md:text-4xl text-3xl'>Full Stack Web Devloper</span>
 <span className='md:text-3xl text-xl'>[Bringing your ideas to real word through my skills]</span>
-<a href="./src/assets/my.pdf" className='border-2 gap-3 rounded-[23px] font-bold border-black px-5 py-2 w-[200px] flex items-center justify-center'  download={"my.pdf"}>Resume<FaLock /></a>
+<a href={resume} className='border-2 gap-3 rounded-[23px] font-bold border-black px-5 py-2 w-[200px] flex items-center justify-center'  download={"RaviResume"}>Resume<FaLock /></a>
+{/* <a href={resume} download={"RaviResume"}>download</a> */}
 </div>
 
 <div className="right rounded-[94px] w-[300px] md:w-[400px]  ">
