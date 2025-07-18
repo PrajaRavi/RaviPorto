@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../assets/banda.png'
+import logo from '../assets/banda.webp'
 import Fotter from './Fotter'
 export default function About() {
   return (
