@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import logo from '../assets/banda.webp'
 import "../App.css"
 import{FaLaptopCode,FaCss3,FaJs,FaNodeJs,FaReact, FaHtml5,FaPython, FaAngular, FaDownload} from 'react-icons/fa'
@@ -13,6 +13,7 @@ import Fotter from './Fotter'
 import {gsap} from "gsap"
 import {ScrollTrigger} from "gsap/ScrollTrigger"
 import { useGSAP } from '@gsap/react'
+const name = "Ravi Prajapati";
 
 export default function Home() {
   // let filepath=require("../assets/my.pdf")
@@ -151,32 +152,32 @@ export default function Home() {
 
               })
             }
-        // if(window.innerWidth>600){
+        if(window.innerWidth>600){
 
-        //   gsap.from(".first-skills",{
-        //     y:-100,
-        //     opacity:0,
-        //     duration:1,
-        //     // scrollTrigger:"#page2 .box1",
-        //     stagger:1,
+          gsap.from(".first-skills",{
+            y:-100,
+            opacity:0,
+            duration:0.7,
+            // scrollTrigger:"#page2 .box1",
+            stagger:1,
             
             
-        //     // borderBottomWidth:"300px",
-        //     // width:"300px",
-        //     scrollTrigger:{
-        //       trigger:".first-skills",
-        //       scroller:"body",
-        //       markers:true,
-        //       start:"top 50%",
-        //       end:"top 20%",
-        //       scrub:1,
+            // borderBottomWidth:"300px",
+            // width:"300px",
+            scrollTrigger:{
+              trigger:".first-skills",
+              scroller:"body",
+              markers:true,
+              start:"top 50%",
+              end:"top 20%",
+              scrub:1,
               
               
-        //     },
-        //     yoyo:true,
+            },
+            yoyo:true,
             
-        //   })
-        // }
+          })
+        }
         // // else{
 
         //   gsap.from(".first-skills",{
@@ -279,7 +280,7 @@ export default function Home() {
           t1.from(".cl-element",{
             y:-100,
             opacity:0,
-            duration:0.8,
+            duration:4,
             delay:0.5,
             // scrollTrigger:"#page2 .box1",
             stagger:1,
@@ -324,29 +325,76 @@ export default function Home() {
             
           })
         }
-        // t1.from(".skill-heading",{
-        //       y:-100,
-        //         opacity:0,
-        //         duration:0.5,
-        //         // scrollTrigger:"#page2 .box1",
-        //         stagger:1,
-        //         // borderBottomWidth:"300px",
-        //         // width:"300px",
-        //         scrollTrigger:{
-        // trigger:".first-skills1",
-        // scroller:"body",
-        // // markers:true,
-        // start:"top 50%",
-        // end:"top 20%",
-        // scrub:1,
-
-
-        //         },
-        //         yoyo:true,
-
-        // })
+        
         
     })
+
+
+    
+      let mycursor=useRef();
+      let home_Container=useRef();
+      // document.getElementsByClassName("home-container").addEventListener("mousemove",(e)=>{
+      //   mycursor.current.style.left=e.clientX+"px";
+      //   mycursor.current.style.top=e.clientY+"px";
+    
+      //   // console.log("Hello")
+        
+    
+      // })
+function HandleMouse(e){
+  mycursor.current.style.left=e.clientX+"px";
+        mycursor.current.style.top=e.clientY+"px";
+    
+}
+        const [positions, setPositions] = useState(
+        Array.from({ length: name.length }, () => ({ x: 0, y: 0 }))
+      );
+    
+      const mouseRef = useRef({ x: 0, y: 0 });
+      const requestRef = useRef();
+    
+      useEffect(() => {
+        const handleMouseMove = (e) => {
+          mouseRef.current = { x: e.clientX, y: e.clientY };
+        };
+    
+        document.addEventListener("mousemove", handleMouseMove);
+    
+        const animate = () => {
+          setPositions((prev) => {
+            const newPositions = [...prev];
+            newPositions[0] = {
+              x: mouseRef.current.x,
+              y: mouseRef.current.y,
+            };
+    
+            for (let i = 1; i < name.length; i++) {
+              const prevPos = newPositions[i - 1];
+              const currPos = newPositions[i];
+              const dx = prevPos.x - currPos.x;
+              const dy = prevPos.y - currPos.y;
+    
+              newPositions[i] = {
+                x: currPos.x + dx * 0.3,
+                y: currPos.y + dy * 0.3,
+              };
+            }
+    
+            return newPositions;
+          });
+    
+          requestRef.current = requestAnimationFrame(animate);
+        };
+    
+        animate();
+    
+        return () => {
+          document.removeEventListener("mousemove", handleMouseMove);
+          cancelAnimationFrame(requestRef.current);
+        };
+      }, []);
+    
+
     useEffect(() => {
       const currentWord = words[currentWordIndex];
       const typingSpeed = isDeleting ? 100 : 150;
@@ -372,13 +420,26 @@ export default function Home() {
   
   return (
     <>
+          {positions.map((pos, i) => (
+        <span
+          key={i}
+          className="absolute text-xl font-bold text-black"
+          style={{
+            transform: `translate(${pos.x}px, ${pos.y}px)`,
+            transition: "transform 0.1s ease",
+          }}
+        >
+          {name[i]}
+        </span>
+      ))}
+
     <div className='big-container relative top-[50px]'>
-      <div className="home-container flex-wrap flex items-center px-10    lg:justify-between justify-center  w-[90%] lg:w-[88%]  min-h-[90vh] my-3">
+      <div ref={home_Container} onMouseMove={(e)=>{HandleMouse(e)}} className="home-container flex-wrap flex items-center px-10    lg:justify-between justify-center  w-[90%] lg:w-[88%]  min-h-[90vh] my-3">
 <div className="left flex    flex-col font-bold md:gap-5 gap-2">
 <span className='text-3xl '>Hello, I am,</span>
 <span className='md:text-5xl text-3xl myname'>Ravi Prajapati,</span>
 {/* <span className='md:text-4xl text-3xl'>Full Stack Web Devloper</span> */}
-   <div style={{ fontSize: '2rem',}} className='myname'>
+   <div style={window.innerWidth>600?{ fontSize: '2rem',}:{ fontSize: '1.3rem',}} className='myname'>
        {currentText}
     <span className="cursor">|</span>
      </div>

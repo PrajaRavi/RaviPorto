@@ -4,10 +4,12 @@ import Fotter from './Fotter'
 export default function About() {
   return (
     <>
-    <div className="big-container">
+    <div className=" flex flex-col items-center w-[100%] h-[100vh] justify-center gap-1">
+
+    <div className="big-container  w-[100%] h-[100vh] border-2 top-[0px]">
 
     
-    <div className='w-[90%] flex    flex-wrap relative  flex-row px-[40px]  items-center justify-center  h-[90vh]'>
+    <div className='w-[90%] flex    flex-wrap relative md:gap-[40px] gap-0 flex-row px-[40px]  items-center justify-center  h-[100%] '>
       <div className="right-img rounded-[94px]  relative top-[34px] md:w-[400px] w-[200px]   ">
         <img  className=' w-[100%] h-[100%] rounded-[94px]' src={logo} alt="" />
         
@@ -31,6 +33,8 @@ export default function About() {
       
     </div>
     <Fotter position={'absolute'} bottom={'0'}/>
+    </div>
+
     </>
 
   )

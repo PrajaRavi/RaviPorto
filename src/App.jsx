@@ -8,7 +8,6 @@ import About from './Component/About'
 import Lenis from "@studio-freight/lenis"
 
 
-const name = "Ravi Prajapati";
 export default function App() {
 // lenis
  const lenis = useRef(null);
@@ -16,7 +15,7 @@ export default function App() {
   useEffect(() => {
     // Initialize Lenis
     lenis.current = new Lenis({
-      duration: 0.6, // Control the duration of the scroll
+      duration: 16, // Control the duration of the scroll
       easing: (t) => 1 - Math.pow(1 - t, 3), // Cubic easing for smooth stop
       smooth: true,
       smoothTouch: true, // Enable smooth scrolling on touch devices
@@ -96,18 +95,6 @@ export default function App() {
     <>
      <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-50">
       
-      {positions.map((pos, i) => (
-        <span
-          key={i}
-          className="absolute text-xl font-bold text-black"
-          style={{
-            transform: `translate(${pos.x}px, ${pos.y}px)`,
-            transition: "transform 0.1s ease",
-          }}
-        >
-          {name[i]}
-        </span>
-      ))}
     </div>
   
 {/* <div ref={mycursor} className="cursor-animation transition-all duration-[60] rounded-full cursor-none z-50 relative w-[10px] h-[10px] bg-black">
