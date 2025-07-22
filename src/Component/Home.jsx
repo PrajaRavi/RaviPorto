@@ -167,7 +167,7 @@ export default function Home() {
             scrollTrigger:{
               trigger:".first-skills",
               scroller:"body",
-              markers:true,
+              // markers:true,
               start:"top 50%",
               end:"top 20%",
               scrub:1,
