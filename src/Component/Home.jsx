@@ -152,32 +152,32 @@ export default function Home() {
 
               })
             }
-        if(window.innerWidth>600){
+        // if(window.innerWidth>600){
 
-          gsap.from(".first-skills",{
-            y:-100,
-            opacity:0,
-            duration:0.7,
-            // scrollTrigger:"#page2 .box1",
-            stagger:1,
+        //   gsap.from(".first-skills",{
+        //     y:-100,
+        //     opacity:0,
+        //     duration:0.7,
+        //     // scrollTrigger:"#page2 .box1",
+        //     stagger:1,
             
             
-            // borderBottomWidth:"300px",
-            // width:"300px",
-            scrollTrigger:{
-              trigger:".first-skills",
-              scroller:"body",
-              // markers:true,
-              start:"top 50%",
-              end:"top 20%",
-              scrub:1,
+        //     // borderBottomWidth:"300px",
+        //     // width:"300px",
+        //     scrollTrigger:{
+        //       trigger:".first-skills",
+        //       scroller:"body",
+        //       // markers:true,
+        //       start:"top 50%",
+        //       end:"top 20%",
+        //       scrub:1,
               
               
-            },
-            yoyo:true,
+        //     },
+        //     yoyo:true,
             
-          })
-        }
+        //   })
+        // }
         // // else{
 
         //   gsap.from(".first-skills",{
@@ -260,7 +260,7 @@ export default function Home() {
             // scrollTrigger:"#page2 .box1",
             stagger:1,
             // borderBottomWidth:"300px",
-                width:"350px",
+                width:"300px",
                 scrollTrigger:{
         trigger:".cl-heading",
         scroller:"body",
