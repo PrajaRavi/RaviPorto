@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react'
-import logo from '../assets/ravi4.png'
+import logo from '../assets/banda.webp'
 import "../App.css"
 import{FaLaptopCode,FaCss3,FaJs,FaNodeJs,FaReact, FaHtml5,FaPython, FaAngular, FaDownload} from 'react-icons/fa'
 import{BiLogoPlayStore,BiLogoCPlusPlus, BiLogoPython} from 'react-icons/bi'
@@ -151,56 +151,56 @@ export default function Home() {
 
               })
             }
-        if(window.innerWidth>600){
+        // if(window.innerWidth>600){
 
-          gsap.from(".first-skills",{
-            y:-100,
-            opacity:0,
-            duration:0.8,
-            // scrollTrigger:"#page2 .box1",
-            stagger:1,
-            delay:0.5,
+        //   gsap.from(".first-skills",{
+        //     y:-100,
+        //     opacity:0,
+        //     duration:1,
+        //     // scrollTrigger:"#page2 .box1",
+        //     stagger:1,
             
-            // borderBottomWidth:"300px",
-            // width:"300px",
-            scrollTrigger:{
-              trigger:".first-skills",
-              scroller:"body",
-              markers:true,
-              start:"top 50%",
-              end:"top 20%",
-              scrub:1,
+            
+        //     // borderBottomWidth:"300px",
+        //     // width:"300px",
+        //     scrollTrigger:{
+        //       trigger:".first-skills",
+        //       scroller:"body",
+        //       markers:true,
+        //       start:"top 50%",
+        //       end:"top 20%",
+        //       scrub:1,
               
               
-            },
-            yoyo:true,
+        //     },
+        //     yoyo:true,
             
-          })
-        }
-        else{
+        //   })
+        // }
+        // // else{
 
-          gsap.from(".first-skills",{
-            y:-100,
-            opacity:0,
-            duration:0.3,
-            // scrollTrigger:"#page2 .box1",
-            stagger:1,
-            // borderBottomWidth:"300px",
-            // width:"300px",
-            scrollTrigger:{
-              trigger:".first-skills",
-              scroller:"body",
-              // markers:true,
-              start:"top 80%",
-              end:"top 0%",
-              scrub:1,
+        //   gsap.from(".first-skills",{
+        //     y:-100,
+        //     opacity:0,
+        //     duration:1,
+        //     // scrollTrigger:"#page2 .box1",
+        //     stagger:1,
+        //     // borderBottomWidth:"300px",
+        //     // width:"300px",
+        //     scrollTrigger:{
+        //       trigger:".first-skills",
+        //       scroller:"body",
+        //       markers:true,
+        //       start:"top 80%",
+        //       end:"top 0%",
+        //       scrub:1,
               
               
-            },
-            yoyo:true,
+        //     },
+        //     yoyo:true,
             
-          })
-        }
+        //   })
+        // }
         
     t1.to('.language',
         // {
@@ -388,7 +388,7 @@ export default function Home() {
 </div>
 
 <div className="right-img rounded-[94px] w-[300px] md:w-[400px]  ">
-  <img  className=' w-[100%] h-[100%] rounded-[94px] ' src={logo} alt="" />
+  <img  className=' w-[100%] h-[100%] md:rounded-[94px] rounded-[33px] ' src={logo} alt="" />
   
 </div>
       
@@ -397,7 +397,7 @@ export default function Home() {
 
       
 <div className="skills w-[100%] flex flex-wrap opacity-0 flex-col items-center  px-2 justify-center">
-  <h1 className='font-bold text-3xl text-center border-b-3 pb-2   skill-heading my-4'>My Skills</h1>
+  <h1 className='font-bold text-3xl text-center border-b-3 pb-2   skill-heading'>My Skills</h1>
   <div className="dabba flex flex-wrap gap-10   items-center justify-between my-10">
     <div className="first-skills group cursor-pointer transition-all duration-300 mx-auto  w-[30%] min-w-[300px]  flex items-center justify-center  shadow px-3 py-2 rounded-2xl flex-col gap-5">
       <h1 className='font-bold text-2xl h-[40px]  transition-all duration-150 group-hover:underline group-hover:scale-[1.2]   '>Website Devlopment</h1>

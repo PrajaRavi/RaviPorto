@@ -113,7 +113,37 @@ transition: all 0.4s ease-in-out;
       transition: all 0.001s linear;
       box-shadow: 0 0 1rem 0.3rem black;
     }
-    .right-img{
+    @media (min-width:700px) and (max-width:100vw){
+      .home-container{
+  position: relative;
+  
+}
+.home-container::before{
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 20%;
+  height: 30%;
+  border-top: 2px solid;
+  border-right: 2px solid;
+
+}
+.home-container::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 20%;
+  height: 30%;
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+
+}
+
+
+    }
+.right-img{
       position: relative;
       /* border:10px solid; */
     }
@@ -149,6 +179,7 @@ transition: all 0.4s ease-in-out;
       animation:animate 5s linear infinite;
 
     }
+    
     @keyframes animate{
       0%{
         width: 0;
@@ -201,32 +232,6 @@ transition: all 0.4s ease-in-out;
 
 
     }
-.home-container{
-  position: relative;
-  
-}
-.home-container::before{
-  content: '';
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 20%;
-  height: 30%;
-  border-top: 2px solid;
-  border-right: 2px solid;
-
-}
-.home-container::after{
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 20%;
-  height: 30%;
-  border-bottom: 2px solid;
-  border-left: 2px solid;
-
-}
 .first:hover{
 
   box-shadow: -5px -5px 5px black;
