@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import '../App.css'
 import { Link } from 'react-router-dom'
-import logo1  from "../assets/logo.jpg"
+import logo1  from "../assets/LOGO.jpg"
 import {gsap} from "gsap"
 import {ScrollTrigger} from "gsap/ScrollTrigger"
 import {useGSAP} from "@gsap/react"
