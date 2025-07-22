@@ -437,7 +437,7 @@ function HandleMouse(e){
       <div ref={home_Container} onMouseMove={(e)=>{HandleMouse(e)}} className="home-container flex-wrap flex items-center px-10    lg:justify-between justify-center  w-[90%] lg:w-[88%]  min-h-[90vh] my-3">
 <div className="left flex    flex-col font-bold md:gap-5 gap-2">
 <span className='text-3xl '>Hello, I am,</span>
-<span className='md:text-5xl text-3xl myname'>Ravi Prajapati,</span>
+<span className='md:text-5xl text-3xl myname1  pb-3'>Ravi Prajapati,</span>
 {/* <span className='md:text-4xl text-3xl'>Full Stack Web Devloper</span> */}
    <div style={window.innerWidth>600?{ fontSize: '2rem',}:{ fontSize: '1.3rem',}} className='myname'>
        {currentText}
@@ -446,6 +446,8 @@ function HandleMouse(e){
 <span className='md:text-3xl text-xl'>[Bringing your ideas to real word through my skills]</span>
 <a href={resume} className='border-2 download gap-3 hover:border-white rounded-[23px] hover:text-white  font-bold border-black px-5 py-2 w-[200px] flex items-center justify-center'  download={"RaviResume"}>Resume<FaDownload/></a>
 {/* <a href={resume} download={"RaviResume"}>download</a> */}
+  {/* <img src={logo} alt="logo "  className='w-[100px] h-[100px] absolute'/> */}
+
 </div>
 
 <div className="right-img rounded-[94px] w-[300px] md:w-[400px]  ">
@@ -460,7 +462,7 @@ function HandleMouse(e){
 <div className="skills w-[100%] flex flex-wrap opacity-0 flex-col items-center  px-2 justify-center">
   <h1 className='font-bold text-3xl text-center border-b-3 pb-2   skill-heading'>My Skills</h1>
   <div className="dabba flex flex-wrap gap-10   items-center justify-between my-10">
-    <div className="first-skills group cursor-pointer transition-all duration-300 mx-auto  w-[30%] min-w-[300px]  flex items-center justify-center  shadow px-3 py-2 rounded-2xl flex-col gap-5">
+    <div className="first-skills group cursor-pointer transition-all duration-300 mx-auto  w-[30%] min-w-[300px]  flex items-center justify-center  shadow px-3 py-2 rounded-2xl flex-col gap-5 ">
       <h1 className='font-bold text-2xl h-[40px]  transition-all duration-150 group-hover:underline group-hover:scale-[1.2]   '>Website Devlopment</h1>
       <FaLaptopCode className='font-bold text-5xl group-hover:scale-[1.2] transition-all duration-200  w-[100%]'/>
 

@@ -77,15 +77,73 @@ transition: all 0.4s ease-in-out;
       
       
     }
+    .first-skills:hover{
+      box-shadow: -5px -5px 5px black;
+      
+    }
     .right1 .third{
       position: relative;
       left:  30%;
       transform-origin: 0% 0%;
     }
 
-    .myname{
+    .myname1{
       font-family: cursive;
+      /* animation: animate1 2s linear infinite; */
+      position: relative;
     }
+    
+    .myname1::after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      margin-top: 3px;
+      width: 0%;
+      animation: animate1 2s linear infinite;
+      
+      height: 3px;
+      background-color: black;
+    }
+    @media (min-width:0px) and (max-width:600px){
+      @keyframes animate1{
+        25%{
+          width: 70%;
+        }
+        50%{
+        width: 70%;
+        
+      }
+      75%{
+        width: 70%;
+        
+      }
+      100%{
+        width: 0%;
+        
+      }
+    }
+  }
+    @media (min-width:600px) and (max-width:100vw){
+      @keyframes animate1{
+        25%{
+          width: 48%;
+        }
+        50%{
+        width: 48%;
+        
+      }
+      75%{
+        width: 48%;
+        
+      }
+      100%{
+        width: 0%;
+        
+      }
+    }
+  }
+    /* } */
     .html::after,.css::after,.tcss::after,.js::after,.node::after,.react::after,.mongo::after,.python::after,.cpp::after,.angular::after{
       content: "90%";
       font-size: 1rem;
