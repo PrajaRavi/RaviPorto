@@ -10,10 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
+    "@studio-freight/lenis": "^1.0.42",
     "@tailwindcss/vite": "^4.0.9",
     "axios": "^1.8.1",
     "chart.js": "^4.4.9",
     "emoji-picker-react": "^4.13.2",
+    "gsap": "^3.13.0",
     "i18next": "^24.2.3",
     "i18next-browser-languagedetector": "^8.0.4",
     "react": "^19.0.0",

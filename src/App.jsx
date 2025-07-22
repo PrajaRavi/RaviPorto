@@ -5,10 +5,35 @@ import Home from './Component/Home'
 import{BrowserRouter,Routes,Route} from 'react-router-dom'
 import Contact from './Component/Contact'
 import About from './Component/About'
+import Lenis from "@studio-freight/lenis"
 
 
 const name = "Ravi Prajapati";
 export default function App() {
+// lenis
+ const lenis = useRef(null);
+
+  useEffect(() => {
+    // Initialize Lenis
+    lenis.current = new Lenis({
+      duration: 0.6, // Control the duration of the scroll
+      easing: (t) => 1 - Math.pow(1 - t, 3), // Cubic easing for smooth stop
+      smooth: true,
+      smoothTouch: true, // Enable smooth scrolling on touch devices
+    });
+
+    const animate = (time) => {
+      lenis.current.raf(time);
+      requestAnimationFrame(animate);
+    };
+
+    requestAnimationFrame(animate);
+
+    // Cleanup on unmount
+    return () => {
+      lenis.current.destroy();
+    };
+  }, []);
 
   let mycursor=useRef();
   window.addEventListener("mousemove",(e)=>{
@@ -70,6 +95,7 @@ export default function App() {
   return (
     <>
      <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-50">
+      
       {positions.map((pos, i) => (
         <span
           key={i}

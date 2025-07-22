@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../assets/banda.webp'
+import logo from '../assets/ravi4.png'
 import Fotter from './Fotter'
 export default function About() {
   return (
@@ -8,7 +8,7 @@ export default function About() {
 
     
     <div className='w-[90%] flex    flex-wrap relative  flex-row px-[40px] lg:gap-[50px] items-center justify-center  h-[90vh]'>
-      <div className="right rounded-[94px] w-[400px] max-h-[400px]  ">
+      <div className="right-img rounded-[94px] w-[400px] max-h-[400px]  ">
         <img  className=' w-[100%] h-[100%] rounded-[94px]' src={logo} alt="" />
         
       </div>

@@ -16,7 +16,7 @@ let [name,setname]=useState()
  let message1=useRef();
   async function HandleSubmit(e){
     e.preventDefault();
-    let {data}=await axios.post(`http://localhost:4500/contact`,{
+    let {data}=await axios.post(`https://ravistudiobackend.onrender.com/contact`,{
 name,email,contact,message
     });
     console.log(data)
