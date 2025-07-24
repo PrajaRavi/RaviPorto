@@ -10,87 +10,10 @@ import Lenis from "@studio-freight/lenis"
 
 export default function App() {
 // lenis
- const lenis = useRef(null);
-
-  useEffect(() => {
-    // Initialize Lenis
-    lenis.current = new Lenis({
-      duration: 16, // Control the duration of the scroll
-      easing: (t) => 1 - Math.pow(1 - t, 3), // Cubic easing for smooth stop
-      smooth: true,
-      smoothTouch: true, // Enable smooth scrolling on touch devices
-    });
-
-    const animate = (time) => {
-      lenis.current.raf(time);
-      requestAnimationFrame(animate);
-    };
-
-    requestAnimationFrame(animate);
-
-    // Cleanup on unmount
-    return () => {
-      lenis.current.destroy();
-    };
-  }, []);
-
-  let mycursor=useRef();
-  window.addEventListener("mousemove",(e)=>{
-    mycursor.current.style.left=e.clientX+"px";
-    mycursor.current.style.top=e.clientY+"px";
-
-    // console.log("Hello")
-    
-
-  })
-    const [positions, setPositions] = useState(
-    Array.from({ length: name.length }, () => ({ x: 0, y: 0 }))
-  );
-
-  const mouseRef = useRef({ x: 0, y: 0 });
-  const requestRef = useRef();
-
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      mouseRef.current = { x: e.clientX, y: e.clientY };
-    };
-
-    document.addEventListener("mousemove", handleMouseMove);
-
-    const animate = () => {
-      setPositions((prev) => {
-        const newPositions = [...prev];
-        newPositions[0] = {
-          x: mouseRef.current.x,
-          y: mouseRef.current.y,
-        };
-
-        for (let i = 1; i < name.length; i++) {
-          const prevPos = newPositions[i - 1];
-          const currPos = newPositions[i];
-          const dx = prevPos.x - currPos.x;
-          const dy = prevPos.y - currPos.y;
-
-          newPositions[i] = {
-            x: currPos.x + dx * 0.3,
-            y: currPos.y + dy * 0.3,
-          };
-        }
-
-        return newPositions;
-      });
-
-      requestRef.current = requestAnimationFrame(animate);
-    };
-
-    animate();
-
-    return () => {
-      document.removeEventListener("mousemove", handleMouseMove);
-      cancelAnimationFrame(requestRef.current);
-    };
-  }, []);
-
+ 
+  
+  
+  
   return (
     <>
      <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-50">

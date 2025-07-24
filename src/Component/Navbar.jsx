@@ -93,7 +93,7 @@ if(second.current.style.opacity==1){
       </div>
 
     <div className="right1 md:hidden">
-      <div class="container" onClick={HandleClick}>
+      <div class="container z-50" onClick={HandleClick}>
     <div class="first" ref={first}></div>
     <div class="second" ref={second}></div>
     <div class="third" ref={third}></div>

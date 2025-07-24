@@ -20,10 +20,6 @@ export default function Home() {
   let fileurl="./my.pdf"
   let t1=gsap.timeline();
     // Adding a new functionality
-  const words = ["Welcome To My Website", "MERN Devloper","MEAN Devloper","App Devloper","Frontend Devloper","Backend Devloper"];
-  const [currentWordIndex, setCurrentWordIndex] = useState(0);
-    const [currentText, setCurrentText] = useState('');
-    const [isDeleting, setIsDeleting] = useState(false);
   useGSAP(()=>{
     gsap.from(".left",{
           // fontSize:"4rem",
@@ -342,10 +338,15 @@ export default function Home() {
     
       // })
 function HandleMouse(e){
-  mycursor.current.style.left=e.clientX+"px";
-        mycursor.current.style.top=e.clientY+"px";
+  if(window.innerWidth>600){
+
+    mycursor.current.style.left=e.clientX+"px";
+    mycursor.current.style.top=e.clientY+"px";
+  }
     
 }
+if(window.innerWidth>600){
+  
         const [positions, setPositions] = useState(
         Array.from({ length: name.length }, () => ({ x: 0, y: 0 }))
       );
@@ -393,8 +394,18 @@ function HandleMouse(e){
           cancelAnimationFrame(requestRef.current);
         };
       }, []);
-    
+}
 
+
+
+
+      // All about typing animation
+  const words = ["Welcome To My Website", "MERN Devloper","MEAN Devloper","App Devloper","Frontend Devloper","Backend Devloper"];
+    
+const [currentWordIndex, setCurrentWordIndex] = useState(0);
+    const [currentText, setCurrentText] = useState('');
+    const [isDeleting, setIsDeleting] = useState(false);
+  
     useEffect(() => {
       const currentWord = words[currentWordIndex];
       const typingSpeed = isDeleting ? 100 : 150;
@@ -420,7 +431,7 @@ function HandleMouse(e){
   
   return (
     <>
-          {positions.map((pos, i) => (
+          {window.innerWidth>600?positions.map((pos, i) => (
         <span
           key={i}
           className="absolute text-xl font-bold text-black"
@@ -431,7 +442,7 @@ function HandleMouse(e){
         >
           {name[i]}
         </span>
-      ))}
+      )):null}
 
     <div className='big-container relative top-[50px]'>
       <div ref={home_Container} onMouseMove={(e)=>{HandleMouse(e)}} className="home-container flex-wrap flex items-center px-10    lg:justify-between justify-center  w-[90%] lg:w-[88%]  min-h-[90vh] my-3">
