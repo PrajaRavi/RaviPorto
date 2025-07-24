@@ -20,7 +20,7 @@ export default function About() {
       {/* <h1>3.Education:12th pass, Bsc cs first year running</h1> */}
       <h1 className='text-sm md:text-xl'>4.email:mechraviprajapati@gmail.com</h1>
       <h1 className='text-sm md:text-xl'>5.email:kingraviprajapati@gmail.com</h1>
-      <h1 className='text-sm md:text-xl'>6.contact:8976427743</h1>
+      <h1 className='text-sm md:text-xl'>6.WhatsApp Me:8976427743</h1>
       <h1 className='text-sm md:text-xl'>7.contact:7304865646</h1>
       <h1 className='text-sm md:text-xl'>8.Age:19</h1>
       <h1 className='text-sm md:text-xl'>9.Projects: i-Full Stack Music App like spotify and jio savan etc... <br />

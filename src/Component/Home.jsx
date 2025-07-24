@@ -345,11 +345,11 @@ function HandleMouse(e){
   }
     
 }
+const [positions, setPositions] = useState(
+
+      Array.from({ length: name.length }, () => ({ x: 0, y: 0 }))
+    );
 if(window.innerWidth>600){
-  
-        const [positions, setPositions] = useState(
-        Array.from({ length: name.length }, () => ({ x: 0, y: 0 }))
-      );
     
       const mouseRef = useRef({ x: 0, y: 0 });
       const requestRef = useRef();
