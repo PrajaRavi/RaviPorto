@@ -147,6 +147,9 @@ transition: all 0.4s ease-in-out;
     }
   }
     /* } */
+    .css{
+      filter: drop-shadow(20px);
+    }
     .html::after,.css::after,.tcss::after,.js::after,.node::after,.react::after,.mongo::after,.python::after,.cpp::after,.angular::after{
       content: "90%";
       font-size: 1rem;
