@@ -74,12 +74,12 @@ useEffect(()=>{
       
       
       </BrowserRouter>
-      {navigator.userAgent.includes("Windows")?
+      {/* {navigator.userAgent.includes("Windows")?
 
         <div className="relative flex items-center justify-center top-0 w-[100%] h-[100vh] z-50 border-2 border-red-400" onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
       <h1 ref={textRef} className="name-3d text-8xl">Ravi Prajapati</h1>
     </div>:null
-      }
+      } */}
     </>
   )
 }

@@ -9,16 +9,27 @@ import {DiMongodb} from "react-icons/di"
 import {RiTailwindCssFill} from 'react-icons/ri'
 import {IoLogoHtml5} from 'react-icons/io5'
 import resume from "../assets/my.pdf"
+import ChatWebImage from "../assets/chatapp.png"
+import ChatWebVideo from "../assets/video/chatapp.mp4"
+import EcomWebVideo from "../assets/video/EcomWeb.mp4"
+import MusicWebVideo from "../assets/video/MusicWeb.mp4"
 import Fotter from './Fotter'
 import {gsap} from "gsap"
 import {ScrollTrigger} from "gsap/ScrollTrigger"
 import { useGSAP } from '@gsap/react'
+// Adding device mokup
+import { DeviceFrameset } from 'react-device-frameset'
+import 'react-device-frameset/styles/marvel-devices.min.css'
+
 const name = "Ravi Prajapati";
 
 export default function Home() {
   // let filepath=require("../assets/my.pdf")
   let fileurl="./my.pdf"
   let t1=gsap.timeline();
+  let [active,setactive]=useState(false)
+  let [active1,setactive1]=useState(false)
+  let [active3,setactive3]=useState(false)
     // Adding a new functionality
   useGSAP(()=>{
     gsap.from(".left",{
@@ -494,6 +505,7 @@ const [currentWordIndex, setCurrentWordIndex] = useState(0);
     
   </div>
 </div>
+
 <div className="language w-[100%]  mb-[100px]  flex flex-col opacity-0 cl pb-4 items-center justify-center gap-[10px]">
   <h1 className='font-bold md:text-4xl text-2xl py-2 text-center   border-b-3  my-10 cl-heading'>Computer languages</h1>
   <div className="programm my-[20px] flex flex-wrap items-center gap-[40px] justify-center font-bold text-8xl mb-[20px]">
@@ -513,9 +525,78 @@ const [currentWordIndex, setCurrentWordIndex] = useState(0);
   </div>
 
 </div>
+{
+  navigator.userAgent.includes("Windows")?<div className="myproject w-[100%] flex flex-col items-center justify-start h-screen border-">
+<h1 className='font-bold text-3xl  py-1 w-[220px] text-center border-b-3'>My Projects</h1>
+<div className="first_Project px-4 py-1  rounded-[23px] transition-all duration-300 flex  mx-2 items-center   h-[300px]">
+  <div className="detail  px-3 py-3 border-2 flex flex-col rounded-[23px]  items-center justify-center w-[300px] ">
+<h1 className='font-bold text-2xl'>1.Chat WebSite</h1>
+<p className='font-bold'>I used MERN stack to create this website</p>
+<p className='font-semibold text-sm'> i am using cookeis for authentication,and also i had added privacy mode also whre message will not be save in database...</p>
+<a className='underline font-bold cursor-pointer z-50' href="https://github.com/PrajaRavi/MyChatApp.git">Github repo</a>
+  </div>
+<div  className="laptop relative  right-[200px]  w-[100%] h-[100%] flex items-center justify-center">
+
+<DeviceFrameset    zoom={active==false?0.3:0.6}    device="MacBook Pro" color="gold" landscape>
+            {/* <h1 className='font-bold text-5xl py-1 w-[100%] text-center'>Chat App</h1> */}
+            {/* <h2 className='font-bold text-4xl py-1 w-[100%] text-center'>Created using MERN Stack</h2> */}
+            {/* <img onMouseMove={()=>{}} src={ChatWebImage} className='w-[100%]  h-[100%]'  alt="" /> */}
+            <video  onMouseEnter={()=>{setactive(true)}} onMouseLeave={()=>{setactive(false)}} onmou src={ChatWebVideo} loop={true}  autoplay={true}  className='w-[100%] h-[100%] content-center ' muted controls={true}></video>
+        </DeviceFrameset>
+    
+</div>
+
+</div>
+<div className="first_Project px-4 py-1 rounded-[23px] transition-all duration-300 flex  mx-2 items-center    h-[300px]">
+  
+<div  className="laptop relative  right-[-70px]  w-[100%] h-[100%] flex items-center justify-center">
+
+<DeviceFrameset    zoom={active1==false?0.3:0.6}    device="MacBook Pro" color="gold" landscape>
+            {/* <h1 className='font-bold text-5xl py-1 w-[100%] text-center'>Chat App</h1> */}
+            {/* <h2 className='font-bold text-4xl py-1 w-[100%] text-center'>Created using MERN Stack</h2> */}
+            {/* <img onMouseMove={()=>{}} src={ChatWebImage} className='w-[100%]  h-[100%]'  alt="" /> */}
+            <video onMouseEnter={()=>{setactive1(true)}} onMouseLeave={()=>{setactive1(false)}} onmou src={EcomWebVideo} loop={true}  autoplay={true}  className='w-[100%] h-[100%] content-center ' muted controls={true}></video>
+        </DeviceFrameset>
+    
+</div>
+<div className="detail border-2 px-3 py-3 flex flex-col rounded-[23px]  items-center justify-start  ">
+<h1 className='font-bold text-2xl'>2.Ecom Website</h1>
+<p className='font-bold'>I used MERN stack to create this website</p>
+<p className='font-semibold text-sm'> i am using cookeis for authentication,one can add product can update,delete the product and also add to cart functionality...</p>
+<a className='underline font-bold cursor-pointer z-50' href="https://github.com/PrajaRavi/MyEcomWeb.git">Github repo</a>
+  </div>
+</div>
+<div className="first_Project px-4 py-1  rounded-[23px] transition-all duration-300 flex  mx-2 items-center   h-[300px]">
+  <div className="detail  px-3 py-3 border-2 flex flex-col rounded-[23px]  items-center justify-center w-[300px] ">
+<h1 className='font-bold text-2xl'>3.Music WebSite</h1>
+<p className='font-bold'>I used MERN stack to create this website</p>
+<p className='font-semibold text-sm'> i am using cookeis for authentication,and all the feature is added which is in modern Music web for ex--spotify.com,jiosavan.com...</p>
+<a className='underline font-bold cursor-pointer z-50' href="https://github.com/PrajaRavi/RaviStudio.git">Github repo</a>
+  </div>
+<div  className="laptop relative  right-[200px]  w-[100%] h-[100%] flex items-center justify-center">
+
+<DeviceFrameset    zoom={active3==false?0.3:0.6}    device="MacBook Pro" color="gold" landscape>
+            {/* <h1 className='font-bold text-5xl py-1 w-[100%] text-center'>Chat App</h1> */}
+            {/* <h2 className='font-bold text-4xl py-1 w-[100%] text-center'>Created using MERN Stack</h2> */}
+            {/* <img onMouseMove={()=>{}} src={ChatWebImage} className='w-[100%]  h-[100%]'  alt="" /> */}
+            <video  onMouseEnter={()=>{setactive3(true)}} onMouseLeave={()=>{setactive3(false)}} onmou src={MusicWebVideo} loop  autoplay  className='w-[100%] h-[100%] content-center ' muted controls={true}></video>
+        </DeviceFrameset>
+    
+</div>
+
+</div>
+      <Fotter position={'relative'} bottom={'0'}/>
+
+</div>
+:null
+}
+
 </div>
     </div>
-    <Fotter position={'relative'} bottom={'0'}/>
+    {
+      !navigator.userAgent.includes("Windows")?
+      <Fotter position={'relative'} bottom={'0'}/>:null
+    }
     </>
 
   )

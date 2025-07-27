@@ -207,6 +207,23 @@ transition: all 0.4s ease-in-out;
 
 
     }
+    /* .first_Project:hover{
+  box-shadow: 0px 0px 5px  black;
+
+    } */
+     .first_Project{
+      position: relative;
+      /* background-color: red; */
+     }
+     .first_Project::after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background-color: black;
+      width: 100%;
+      height: 2px;
+     }
 .right-img{
       position: relative;
       /* border:10px solid; */
