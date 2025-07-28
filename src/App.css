@@ -211,17 +211,26 @@ transition: all 0.4s ease-in-out;
   box-shadow: 0px 0px 5px  black;
 
     } */
-     .first_Project{
+     .first_Project,.fp1,.fp2{
       position: relative;
       /* background-color: red; */
      }
-     .first_Project::after{
+     .first_Project::after,.fp2::after{
       content: '';
       position: absolute;
       bottom: 0;
       right: 0;
       background-color: black;
-      width: 100%;
+      width: 30%;
+      height: 2px;
+     }
+     .fp1::after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: black;
+      width: 30%;
       height: 2px;
      }
 .right-img{

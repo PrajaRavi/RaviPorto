@@ -27,6 +27,7 @@ export default function Home() {
   // let filepath=require("../assets/my.pdf")
   let fileurl="./my.pdf"
   let t1=gsap.timeline();
+  let t2=gsap.timeline();
   let [active,setactive]=useState(false)
   let [active1,setactive1]=useState(false)
   let [active3,setactive3]=useState(false)
@@ -333,7 +334,28 @@ export default function Home() {
           })
         }
         
+        t1.to(".mpheading",{
+            y:20,
+            opacity:1,
+            duration:1,
+            // scrollTrigger:"#page2 .box1",
+            stagger:1,
+            // borderBottomWidth:"300px",
+                width:"300px",
+                scrollTrigger:{
+        trigger:".mpheading",
+        scroller:"body",
+        // markers:true,
+        start:"top 80%",
+        end:"top 60%",
+        scrub:1,
         
+        
+      },
+      yoyo:true,
+      
+    })
+                  
     })
 
 
@@ -456,12 +478,12 @@ const [currentWordIndex, setCurrentWordIndex] = useState(0);
       )):null}
 
     <div className='big-container relative top-[50px]'>
-      <div ref={home_Container} onMouseMove={(e)=>{HandleMouse(e)}} className="home-container flex-wrap flex items-center px-10    lg:justify-between justify-center  w-[90%] lg:w-[88%]  min-h-[90vh] my-3">
+      <div ref={home_Container} onMouseMove={(e)=>{HandleMouse(e)}} className="home-container flex-wrap sm:flex-nowrap  flex items-center px-10    lg:justify-between  justify-center  w-[90%] lg:w-[88%]  min-h-[90vh] my-3">
 <div className="left flex    flex-col font-bold md:gap-5 gap-2">
-<span className='text-3xl '>Hello, I am,</span>
-<span className='md:text-5xl text-3xl myname1  pb-3'>Ravi Prajapati,</span>
+<span className='md:text-3xl text-xl '>Hello, I am,</span>
+<span className='md:text-5xl text-2xl myname1  pb-3'>Ravi Prajapati,</span>
 {/* <span className='md:text-4xl text-3xl'>Full Stack Web Devloper</span> */}
-   <div style={window.innerWidth>600?{ fontSize: '2rem',}:{ fontSize: '1.3rem',}} className='myname'>
+   <div style={window.innerWidth>600?{ fontSize: '2rem',}:{ fontSize: '1.2rem',}} className='myname'>
        {currentText}
     <span className="cursor">|</span>
      </div>
@@ -518,24 +540,24 @@ const [currentWordIndex, setCurrentWordIndex] = useState(0);
 <button className='relative after:bg-black after:transition-all after:duration-300 after:rounded-md after:absolute after:w-[100%] after:h-[100%] after:content-center after:opacity-0 hover:after:cursor-pointer cl-element  after:top-[40%] hover:after:top-[0%] hover:after:opacity-[1] after:left-0 react' title='React js'><FaReact/></button>  
 <button className='relative after:bg-black after:transition-all after:duration-300 after:rounded-md after:absolute after:w-[100%] after:h-[100%] after:content-center after:opacity-0 hover:after:cursor-pointer cl-element  after:top-[40%] hover:after:top-[0%] hover:after:opacity-[1] after:left-0 node' title='Node js'><FaNodeJs/></button>  
 <button className='relative after:bg-black after:transition-all after:duration-300 after:rounded-md after:absolute after:w-[100%] after:h-[100%] after:content-center after:opacity-0 hover:after:cursor-pointer cl-element  after:top-[40%] hover:after:top-[0%] hover:after:opacity-[1] after:left-0 mongo' title='MongoDB'><DiMongodb/></button>  
-<button className='relative after:bg-black after:transition-all after:duration-300 after:rounded-md after:absolute after:w-[100%] after:h-[100%] after:content-center after:opacity-0 hover:after:cursor-pointer cl-element  after:top-[40%] hover:after:top-[0%] hover:after:opacity-[1] after:left-0 python' title='Python'><FaPython/></button>  
-<button className='relative after:bg-black after:transition-all after:duration-300 after:rounded-md after:absolute after:w-[100%] after:h-[100%] after:content-center after:opacity-0 hover:after:cursor-pointer cl-element  after:top-[40%] hover:after:top-[0%] hover:after:opacity-[1] after:left-0 cpp' title='C Plus plus'><BiLogoCPlusPlus/></button>  
-<button className='relative after:bg-black after:transition-all after:duration-300 after:rounded-md after:absolute after:w-[100%] after:h-[100%] after:content-center after:opacity-0 hover:after:cursor-pointer cl-element  after:top-[40%] hover:after:top-[0%] hover:after:opacity-[1] after:left-0 angular' title='Angular'><FaAngular /></button>  
+<button className='relative after:bg-black after:transition-all after:duration-300 z-50   after:rounded-md after:absolute after:w-[100%] after:h-[100%] after:content-center after:opacity-0 hover:after:cursor-pointer cl-element  after:top-[40%] hover:after:top-[0%] hover:after:opacity-[1] after:left-0 python' title='Python'><FaPython/></button>  
+<button className='relative after:bg-black after:transition-all after:duration-300  z-50  after:rounded-md after:absolute after:w-[100%] after:h-[100%] after:content-center after:opacity-0 hover:after:cursor-pointer cl-element  after:top-[40%] hover:after:top-[0%] hover:after:opacity-[1] after:left-0 cpp' title='C Plus plus'><BiLogoCPlusPlus/></button>  
+<button className='relative after:bg-black after:transition-all after:duration-300 z-50   after:rounded-md after:absolute after:w-[100%] after:h-[100%] after:content-center after:opacity-0 hover:after:cursor-pointer cl-element  after:top-[40%] hover:after:top-[0%] hover:after:opacity-[1] after:left-0 angular' title='Angular'><FaAngular /></button>  
 
   </div>
 
 </div>
 {
   navigator.userAgent.includes("Windows")?<div className="myproject w-[100%] flex flex-col items-center justify-start h-screen border-">
-<h1 className='font-bold text-3xl  py-1 w-[220px] text-center border-b-3'>My Projects</h1>
-<div className="first_Project px-4 py-1  rounded-[23px] transition-all duration-300 flex  mx-2 items-center   h-[300px]">
-  <div className="detail  px-3 py-3 border-2 flex flex-col rounded-[23px]  items-center justify-center w-[300px] ">
+<h1 className='font-bold text-3xl  py-1 w-[220px] text-center border-b-3 opacity-0 mpheading'>My Projects</h1>
+<div className="first_Project fp  relative w-[100%] px-4 py-1  rounded-[23px] transition-all duration-300 flex  justify-center  mx-2 items-center   h-[300px]">
+  <div className="detail absolute px-3 py-3 border-2 flex flex-col rounded-[23px] w-[30%] left-0  items-center justify-center  ">
 <h1 className='font-bold text-2xl'>1.Chat WebSite</h1>
 <p className='font-bold'>I used MERN stack to create this website</p>
 <p className='font-semibold text-sm'> i am using cookeis for authentication,and also i had added privacy mode also whre message will not be save in database...</p>
 <a className='underline font-bold cursor-pointer z-50' href="https://github.com/PrajaRavi/MyChatApp.git">Github repo</a>
   </div>
-<div  className="laptop relative  right-[200px]  w-[100%] h-[100%] flex items-center justify-center">
+<div  className="laptop  relative  left-[30px]  w-[100%] h-[100%] flex items-center justify-center">
 
 <DeviceFrameset    zoom={active==false?0.3:0.6}    device="MacBook Pro" color="gold" landscape>
             {/* <h1 className='font-bold text-5xl py-1 w-[100%] text-center'>Chat App</h1> */}
@@ -547,9 +569,9 @@ const [currentWordIndex, setCurrentWordIndex] = useState(0);
 </div>
 
 </div>
-<div className="first_Project px-4 py-1 rounded-[23px] transition-all duration-300 flex  mx-2 items-center    h-[300px]">
+<div className="first_Project fp1 relative w-[100%] px-4 py-1  rounded-[23px] transition-all duration-300 flex  justify-center  mx-2 items-center   h-[300px]">
   
-<div  className="laptop relative  right-[-70px]  w-[100%] h-[100%] flex items-center justify-center">
+<div  className="laptop relative  right-[70px]  w-[100%] h-[100%] flex items-center justify-center">
 
 <DeviceFrameset    zoom={active1==false?0.3:0.6}    device="MacBook Pro" color="gold" landscape>
             {/* <h1 className='font-bold text-5xl py-1 w-[100%] text-center'>Chat App</h1> */}
@@ -559,21 +581,21 @@ const [currentWordIndex, setCurrentWordIndex] = useState(0);
         </DeviceFrameset>
     
 </div>
-<div className="detail border-2 px-3 py-3 flex flex-col rounded-[23px]  items-center justify-start  ">
+<div className="detail absolute px-3 py-3 border-2 flex flex-col rounded-[23px] w-[30%] right-0  items-center justify-center    ">
 <h1 className='font-bold text-2xl'>2.Ecom Website</h1>
 <p className='font-bold'>I used MERN stack to create this website</p>
 <p className='font-semibold text-sm'> i am using cookeis for authentication,one can add product can update,delete the product and also add to cart functionality...</p>
 <a className='underline font-bold cursor-pointer z-50' href="https://github.com/PrajaRavi/MyEcomWeb.git">Github repo</a>
   </div>
 </div>
-<div className="first_Project px-4 py-1  rounded-[23px] transition-all duration-300 flex  mx-2 items-center   h-[300px]">
-  <div className="detail  px-3 py-3 border-2 flex flex-col rounded-[23px]  items-center justify-center w-[300px] ">
+<div className="first_Project fp2 relative w-[100%] px-4 py-1  rounded-[23px] transition-all duration-300 flex  justify-center  mx-2 items-center   h-[300px]">
+  <div className="detail absolute px-3 py-3 border-2 flex flex-col rounded-[23px] w-[30%] left-0  items-center justify-center   ">
 <h1 className='font-bold text-2xl'>3.Music WebSite</h1>
 <p className='font-bold'>I used MERN stack to create this website</p>
 <p className='font-semibold text-sm'> i am using cookeis for authentication,and all the feature is added which is in modern Music web for ex--spotify.com,jiosavan.com...</p>
 <a className='underline font-bold cursor-pointer z-50' href="https://github.com/PrajaRavi/RaviStudio.git">Github repo</a>
   </div>
-<div  className="laptop relative  right-[200px]  w-[100%] h-[100%] flex items-center justify-center">
+<div  className="laptop relative  left-[20px]  w-[100%] h-[100%] flex items-center justify-center">
 
 <DeviceFrameset    zoom={active3==false?0.3:0.6}    device="MacBook Pro" color="gold" landscape>
             {/* <h1 className='font-bold text-5xl py-1 w-[100%] text-center'>Chat App</h1> */}
