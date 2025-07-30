@@ -83,14 +83,14 @@ if(second.current.style.opacity==1){
     <div className="big-container fixed   top-0 z-50 w-[100%] bg-white flex items-center justify-center flex-col gap-4">
 
     <div className="container  w-[94%] flex items-center justify-between py-2">
-      <div ref={leftref} className="first-nav flex relative items-center justify-center gap-1">
+      <Link to={"/"}><div ref={leftref} className="first-nav cursor-pointer flex relative items-center justify-center gap-1">
 
         <img src={logo1} className='w-[40px] h-[40px] rounded-full relative bottom-[5px]' alt="" />
     <div className="left flex items-center justify-center flex-col">
     <span  className='font-bold text-3xl myname'>RaviPraj</span>
     <span className='text-xs web'>WebDevloper</span>
     </div>
-      </div>
+      </div></Link>
 
     <div className="right1 md:hidden">
       <div class="container z-50" onClick={HandleClick}>

@@ -483,19 +483,19 @@ const [currentWordIndex, setCurrentWordIndex] = useState(0);
 <span className='md:text-3xl text-xl '>Hello, I am,</span>
 <span className='md:text-5xl text-2xl myname1  pb-3'>Ravi Prajapati,</span>
 {/* <span className='md:text-4xl text-3xl'>Full Stack Web Devloper</span> */}
-   <div style={window.innerWidth>600?{ fontSize: '2rem',}:{ fontSize: '1.2rem',}} className='myname'>
+   <div style={window.innerWidth>600?{ fontSize: '2rem',}:{ fontSize: '1.2rem',}} className='myname z-50'>
        {currentText}
     <span className="cursor">|</span>
      </div>
-<span className='md:text-3xl text-xl'>[Bringing your ideas to real word through my skills]</span>
-<a href={resume} className='border-2 download gap-3 hover:border-white rounded-[23px] hover:text-white  font-bold border-black px-5 py-2 w-[200px] flex items-center justify-center'  download={"RaviResume"}>Resume<FaDownload/></a>
+<span className='md:text-3xl text-xl'>Bringing your ideas to real word through my skills</span>
+<a href={resume} className='border-2 z-50 download gap-3 hover:border-white rounded-[23px] hover:text-white  font-bold border-black px-5 py-2 w-[200px] flex items-center justify-center'  download={"RaviResume"}>Resume<FaDownload/></a>
 {/* <a href={resume} download={"RaviResume"}>download</a> */}
   {/* <img src={logo} alt="logo "  className='w-[100px] h-[100px] absolute'/> */}
 
 </div>
 
-<div className="right-img rounded-[94px] w-[300px] md:w-[400px]  ">
-  <img  className=' w-[100%] h-[100%] md:rounded-[94px] rounded-[33px] ' src={logo} alt="" />
+<div className="right-img -z-30 rounded-[94px] w-[300px] md:w-[400px]  ">
+  <img  className=' w-[100%]  h-[100%] md:rounded-[94px] rounded-[33px] ' src={logo} alt="" />
   
 </div>
       
