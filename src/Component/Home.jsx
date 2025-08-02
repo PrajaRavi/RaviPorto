@@ -12,6 +12,7 @@ import resume from "../assets/my.pdf"
 import ChatWebImage from "../assets/chatapp.png"
 import ChatWebVideo from "../assets/video/chatapp.mp4"
 import EcomWebVideo from "../assets/video/EcomWeb.mp4"
+import BlogWebVideo from "../assets/video/BlogWeb.mp4"
 import MusicWebVideo from "../assets/video/MusicWeb.mp4"
 import Fotter from './Fotter'
 import {gsap} from "gsap"
@@ -606,6 +607,25 @@ const [currentWordIndex, setCurrentWordIndex] = useState(0);
     
 </div>
 
+</div>
+<div className="first_Project fp1 relative w-[100%] px-4 py-1  rounded-[23px] transition-all duration-300 flex  justify-center  mx-2 items-center   h-[300px]">
+  
+<div  className="laptop relative  right-[70px]  w-[100%] h-[100%] flex items-center justify-center">
+
+<DeviceFrameset    zoom={active1==false?0.3:0.6}    device="MacBook Pro" color="gold" landscape>
+            {/* <h1 className='font-bold text-5xl py-1 w-[100%] text-center'>Chat App</h1> */}
+            {/* <h2 className='font-bold text-4xl py-1 w-[100%] text-center'>Created using MERN Stack</h2> */}
+            {/* <img onMouseMove={()=>{}} src={ChatWebImage} className='w-[100%]  h-[100%]'  alt="" /> */}
+            <video onMouseEnter={()=>{setactive1(true)}} onMouseLeave={()=>{setactive1(false)}} onmou src={BlogWebVideo} loop={true}  autoplay={true}  className='w-[100%] h-[100%] content-center ' muted controls={true}></video>
+        </DeviceFrameset>
+    
+</div>
+<div className="detail absolute px-3 py-3 border-2 flex flex-col rounded-[23px] w-[30%] right-0  items-center justify-center    ">
+<h1 className='font-bold text-2xl'>4.Blog Website</h1>
+<p className='font-bold'>I used MERN stack to create this website</p>
+<p className='font-semibold text-sm'> i am using cookeis for authentication,one can create blog manuallny as well as with the help of gemini and admin panal also  functionality...</p>
+<a className='underline font-bold cursor-pointer z-50' href="https://github.com/PrajaRavi/MyEcomWeb.git">Github repo</a>
+  </div>
 </div>
       <Fotter position={'relative'} bottom={'0'}/>
 
