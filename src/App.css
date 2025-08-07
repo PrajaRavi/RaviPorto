@@ -199,6 +199,7 @@ transition: all 0.4s ease-in-out;
   bottom: 0;
   left: 0;
   width: 20%;
+  z-index: -20;
   height: 30%;
   border-bottom: 2px solid;
   border-left: 2px solid;
@@ -237,37 +238,76 @@ transition: all 0.4s ease-in-out;
       position: relative;
       /* border:10px solid; */
     }
-    .right-img:before{
-      content: '';
-      width: 40%;
-      animation:animate 5s linear infinite;
-      transition: all 0.3s ease-in-out;
-    
-      height: 40%;
-      position: absolute;
-      top: -30px;
-      left: -30px;
-      /* background-color: red; */
-      /* border:2px solid; */
-      border-top: 8px double;
-      border-left: 8px double;
+    @media (min-width:750px) and (max-width:1300px){
 
+      .right-img::before{
+        content: '';
+        width: 30%;
+        animation:animate 5s linear infinite;
+        transition: all 0.3s ease-in-out;
+      
+        height: 30%;
+        position: absolute;
+        top: -10px;
+        left: -30px;
+        /* background-color: red; */
+        /* border:2px solid; */
+        border-top: 8px double  ;
+        border-left: 8px double;
+  
+      }
+      .right-img::after{
+        content: '';
+        width: 30%;
+        transition: all 0.3s ease-in-out;
+      
+        height: 30%;
+        position: absolute;
+        bottom: -30px;
+        right: -30px;
+        /* background-color: red; */
+        /* border:2px solid; */
+        border-bottom: 8px double ;
+        border-right: 8px double;
+        animation:animate 5s linear infinite;
+  
+      }
     }
-    .right-img::after{
-      content: '';
-      width: 40%;
-      transition: all 0.3s ease-in-out;
     
-      height: 40%;
-      position: absolute;
-      bottom: -30px;
-      right: -30px;
-      /* background-color: red; */
-      /* border:2px solid; */
-      border-bottom: 8px double;
-      border-right: 8px double;
-      animation:animate 5s linear infinite;
+    @media screen and (max-width:750px){
 
+      .right-img::before{
+        content: '';
+        width: 40%;
+        animation:animate 5s linear infinite;
+        transition: all 0.3s ease-in-out;
+      
+        height: 40%;
+        position: absolute;
+        top: -30px;
+        left: -30px;
+        /* background-color: red; */
+        /* border:2px solid; */
+        border-top: 8px double  ;
+        border-left: 8px double;
+  
+      }
+      .right-img::after{
+        content: '';
+        width: 40%;
+        transition: all 0.3s ease-in-out;
+      
+        height: 40%;
+        position: absolute;
+        bottom: -30px;
+        right: -30px;
+        /* background-color: red; */
+        /* border:2px solid; */
+        border-bottom: 8px double ;
+        border-right: 8px double;
+        animation:animate 5s linear infinite;
+  
+      }
     }
     
     @keyframes animate{

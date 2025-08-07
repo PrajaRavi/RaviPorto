@@ -468,7 +468,7 @@ const [currentWordIndex, setCurrentWordIndex] = useState(0);
           {window.innerWidth>600?positions.map((pos, i) => (
         <span
           key={i}
-          className="absolute text-xl font-bold text-black"
+          className="absolute text-xl z-10 font-bold text-black"
           style={{
             transform: `translate(${pos.x}px, ${pos.y}px)`,
             transition: "transform 0.1s ease",
@@ -479,7 +479,7 @@ const [currentWordIndex, setCurrentWordIndex] = useState(0);
       )):null}
 
     <div className='big-container relative top-[50px]'>
-      <div ref={home_Container} onMouseMove={(e)=>{HandleMouse(e)}} className="home-container flex-wrap sm:flex-nowrap  flex items-center px-10    lg:justify-between  justify-center  w-[90%] lg:w-[88%]  min-h-[90vh] my-3">
+      <div ref={home_Container} onMouseMove={(e)=>{HandleMouse(e)}} className="home-container flex-wrap sm:flex-nowrap  flex items-center px-10     lg:justify-between  justify-center  w-[90%] lg:w-[88%]  min-h-[90vh] my-3">
 <div className="left flex    flex-col font-bold md:gap-5 gap-2">
 <span className='md:text-3xl text-xl '>Hello, I am,</span>
 <span className='md:text-5xl text-2xl myname1  pb-3'>Ravi Prajapati,</span>
@@ -488,8 +488,8 @@ const [currentWordIndex, setCurrentWordIndex] = useState(0);
        {currentText}
     <span className="cursor">|</span>
      </div>
-<span className='md:text-3xl text-xl'>Bringing your ideas to real word through my skills</span>
-<a href={resume} className='border-2 z-50 download gap-3 hover:border-white rounded-[23px] hover:text-white  font-bold border-black px-5 py-2 w-[200px] flex items-center justify-center'  download={"RaviResume"}>Resume<FaDownload/></a>
+<span className='md:text-3xl text-xl '>Bringing your ideas to real word through my skills</span>
+<a href={resume}  className='border-2 z-50 cursor-pointer download gap-3 hover:border-white rounded-[23px] hover:text-white  font-bold border-black px-5 py-2 w-[200px] flex items-center justify-center'  download={"RaviResume"}>Resume<FaDownload/></a>
 {/* <a href={resume} download={"RaviResume"}>download</a> */}
   {/* <img src={logo} alt="logo "  className='w-[100px] h-[100px] absolute'/> */}
 
@@ -506,20 +506,20 @@ const [currentWordIndex, setCurrentWordIndex] = useState(0);
       
 <div className="skills w-[100%] flex flex-wrap opacity-0 flex-col items-center  px-2 justify-center">
   <h1 className='font-bold text-3xl text-center border-b-3 pb-2   skill-heading'>My Skills</h1>
-  <div className="dabba flex flex-wrap gap-10   items-center justify-between my-10">
-    <div className="first-skills group cursor-pointer transition-all duration-300 mx-auto  w-[30%] min-w-[300px]  flex items-center justify-center  shadow px-3 py-2 rounded-2xl flex-col gap-5 ">
+  <div className="dabba grid md:grid-cols-3 gap-10 my-10">
+    <div className="first-skills group cursor-pointer transition-all duration-300 mx-auto    flex items-center justify-center  shadow px-3 py-2 rounded-2xl flex-col gap-5 ">
       <h1 className='font-bold text-2xl h-[40px]  transition-all duration-150 group-hover:underline group-hover:scale-[1.2]   '>Website Devlopment</h1>
       <FaLaptopCode className='font-bold text-5xl group-hover:scale-[1.2] transition-all duration-200  w-[100%]'/>
 
       <p className=''>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus laboriosam harum aliquid, a aspernatur eius eum et dignissimos totam mollitia laudantium quis? Perferendis obcaecati quos suscipit explicabo vel reiciendis architecto quo labore maxime delectus?</p>
     </div>
-    <div className="first-skills group cursor-pointer transition-all duration-300 mx-auto  w-[30%] min-w-[300px]  flex items-center justify-center  shadow px-3 py-2 rounded-2xl flex-col gap-5">
+    <div className="first-skills group cursor-pointer transition-all duration-300 mx-auto    flex items-center justify-center  shadow px-3 py-2 rounded-2xl flex-col gap-5">
       <h1 className='font-bold text-2xl h-[40px]  transition-all duration-150 group-hover:underline group-hover:scale-[1.2] '>App Devlopment</h1>
       <BiLogoPlayStore className='font-bold text-5xl group-hover:scale-[1.2] transition-all duration-200  w-[100%]'/>
 
       <p className='text-left'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus laboriosam harum aliquid, a aspernatur eius eum et dignissimos totam mollitia laudantium quis? Perferendis obcaecati quos suscipit explicabo vel reiciendis architecto quo labore maxime delectus?</p>
     </div>
-    <div className="first-skills group cursor-pointer transition-all duration-300 mx-auto  w-[30%] min-w-[300px]  flex items-center justify-center  shadow px-3 py-2 rounded-2xl flex-col gap-5">
+    <div className="first-skills group cursor-pointer transition-all duration-300 mx-auto    flex items-center justify-center  shadow px-3 py-2 rounded-2xl flex-col gap-5">
       <h1 className='font-bold text-2xl h-[40px]  transition-all duration-150 group-hover:underline group-hover:scale-[1.2] '>UI/UX Designer</h1>
       <CgWebsite className='font-bold text-5xl group-hover:scale-[1.2] transition-all duration-200  w-[100%]'/>
 
@@ -531,7 +531,7 @@ const [currentWordIndex, setCurrentWordIndex] = useState(0);
 
 <div className="language w-[100%]  mb-[100px]  flex flex-col opacity-0 cl pb-4 items-center justify-center gap-[10px]">
   <h1 className='font-bold md:text-4xl text-2xl py-2 text-center   border-b-3  my-10 cl-heading'>Computer languages</h1>
-  <div className="programm my-[20px] flex flex-wrap items-center gap-[40px] justify-center font-bold text-8xl mb-[20px]">
+  <div className="programm my-[20px] flex flex-wrap gap-[40px] justify-center font-bold text-8xl mb-[20px]">
 
 
 <button id='html' title='Html' className='relative after:bg-black after:transition-all after:duration-300 after:rounded-md after:absolute after:w-[100%] after:h-[100%] after:content-center after:opacity-0 hover:after:cursor-pointer cl-element  after:top-[40%] hover:after:top-[0%] hover:after:opacity-[1] after:left-0 html'>< FaHtml5 target='Html'/></button>  
