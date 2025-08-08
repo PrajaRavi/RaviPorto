@@ -7,6 +7,7 @@ import{BiLogoPlayStore,BiLogoCPlusPlus, BiLogoPython} from 'react-icons/bi'
 import{CgWebsite} from 'react-icons/cg'
 import {DiMongodb} from "react-icons/di"
 import {RiTailwindCssFill} from 'react-icons/ri'
+import {SiNextdotjs,SiTypescript} from 'react-icons/si'
 import {IoLogoHtml5} from 'react-icons/io5'
 import resume from "../assets/my.pdf"
 import ChatWebImage from "../assets/chatapp.png"
@@ -14,6 +15,7 @@ import ChatWebVideo from "../assets/video/chatapp.mp4"
 import EcomWebVideo from "../assets/video/EcomWeb.mp4"
 import BlogWebVideo from "../assets/video/BlogWeb.mp4"
 import MusicWebVideo from "../assets/video/MusicWeb.mp4"
+import ToDoAppVideo from "../assets/video/Todoapp.mp4"
 import Fotter from './Fotter'
 import {gsap} from "gsap"
 import {ScrollTrigger} from "gsap/ScrollTrigger"
@@ -31,6 +33,7 @@ export default function Home() {
   let t2=gsap.timeline();
   let [active,setactive]=useState(false)
   let [active1,setactive1]=useState(false)
+  let [MouseEnter,setMouseEnter]=useState(false)
   let [active3,setactive3]=useState(false)
     // Adding a new functionality
   useGSAP(()=>{
@@ -465,7 +468,7 @@ const [currentWordIndex, setCurrentWordIndex] = useState(0);
   
   return (
     <>
-          {window.innerWidth>600?positions.map((pos, i) => (
+          {window.innerWidth>600 &&MouseEnter?positions.map((pos, i) => (
         <span
           key={i}
           className="absolute text-xl z-10 font-bold text-black"
@@ -479,7 +482,11 @@ const [currentWordIndex, setCurrentWordIndex] = useState(0);
       )):null}
 
     <div className='big-container relative top-[50px]'>
-      <div ref={home_Container} onMouseMove={(e)=>{HandleMouse(e)}} className="home-container flex-wrap sm:flex-nowrap  flex items-center px-10     lg:justify-between  justify-center  w-[90%] lg:w-[88%]  min-h-[90vh] my-3">
+      <div ref={home_Container} onMouseEnter={()=>{
+setMouseEnter(true)
+      }} onMouseLeave={()=>{
+setMouseEnter(false)
+      }} onMouseMove={(e)=>{HandleMouse(e)}} className="home-container flex-wrap sm:flex-nowrap  flex items-center px-10     lg:justify-between  justify-center  w-[90%] lg:w-[88%]  min-h-[90vh] my-3">
 <div className="left flex    flex-col font-bold md:gap-5 gap-2">
 <span className='md:text-3xl text-xl '>Hello, I am,</span>
 <span className='md:text-5xl text-2xl myname1  pb-3'>Ravi Prajapati,</span>
@@ -534,10 +541,10 @@ const [currentWordIndex, setCurrentWordIndex] = useState(0);
   <div className="programm my-[20px] flex flex-wrap gap-[40px] justify-center font-bold text-8xl mb-[20px]">
 
 
-<button id='html' title='Html' className='relative after:bg-black after:transition-all after:duration-300 after:rounded-md after:absolute after:w-[100%] after:h-[100%] after:content-center after:opacity-0 hover:after:cursor-pointer cl-element  after:top-[40%] hover:after:top-[0%] hover:after:opacity-[1] after:left-0 html'>< FaHtml5 target='Html'/></button>  
+<button id='html' title='Html' className='relative after:bg-black after:transition-all after:duration-300 after:rounded-md after:absolute after:w-[100%] after:h-[100%] after:content-center after:opacity-0 hover:after:cursor-pointer cl-element  after:top-[40%] hover:after:top-[0%] hover:after:opacity-[1] after:left-0 html'><SiNextdotjs target='Html'/></button>  
 <button title='Css' className='relative after:bg-black after:transition-all after:duration-300 after:rounded-md after:absolute after:w-[100%] after:h-[100%] after:content-center after:opacity-0 hover:after:cursor-pointer cl-element  after:top-[40%] hover:after:top-[0%] hover:after:opacity-[1] after:left-0 css'><FaCss3 target='Css' /></button>  
 <button className='relative after:bg-black after:transition-all after:duration-300 after:rounded-md after:absolute after:w-[100%] after:h-[100%] after:content-center after:opacity-0 hover:after:cursor-pointer cl-element  after:top-[40%] hover:after:top-[0%] hover:after:opacity-[1] after:left-0 tcss' title='Tailwind css'><RiTailwindCssFill target='Tailwind Css'/></button>  
-<button className='relative after:bg-black after:transition-all after:duration-300 after:rounded-md after:absolute after:w-[100%] after:h-[100%] after:content-center after:opacity-0 hover:after:cursor-pointer cl-element  after:top-[40%] hover:after:top-[0%] hover:after:opacity-[1] after:left-0 js' title='Javascript'><FaJs/></button>  
+<button className='relative after:bg-black after:transition-all after:duration-300 after:rounded-md after:absolute after:w-[100%] after:h-[100%] after:content-center after:opacity-0 hover:after:cursor-pointer cl-element  after:top-[40%] hover:after:top-[0%] hover:after:opacity-[1] after:left-0 js' title='Javascript'><SiTypescript/></button>  
 <button className='relative after:bg-black after:transition-all after:duration-300 after:rounded-md after:absolute after:w-[100%] after:h-[100%] after:content-center after:opacity-0 hover:after:cursor-pointer cl-element  after:top-[40%] hover:after:top-[0%] hover:after:opacity-[1] after:left-0 react' title='React js'><FaReact/></button>  
 <button className='relative after:bg-black after:transition-all after:duration-300 after:rounded-md after:absolute after:w-[100%] after:h-[100%] after:content-center after:opacity-0 hover:after:cursor-pointer cl-element  after:top-[40%] hover:after:top-[0%] hover:after:opacity-[1] after:left-0 node' title='Node js'><FaNodeJs/></button>  
 <button className='relative after:bg-black after:transition-all after:duration-300 after:rounded-md after:absolute after:w-[100%] after:h-[100%] after:content-center after:opacity-0 hover:after:cursor-pointer cl-element  after:top-[40%] hover:after:top-[0%] hover:after:opacity-[1] after:left-0 mongo' title='MongoDB'><DiMongodb/></button>  
@@ -626,6 +633,25 @@ const [currentWordIndex, setCurrentWordIndex] = useState(0);
 <p className='font-semibold text-sm'> i am using cookeis for authentication,one can create blog manuallny as well as with the help of gemini and admin panal also  functionality...</p>
 <a className='underline font-bold cursor-pointer z-50' href="https://github.com/PrajaRavi/MyEcomWeb.git">Github repo</a>
   </div>
+</div>
+<div className="first_Project fp2 relative w-[100%] px-4 py-1  rounded-[23px] transition-all duration-300 flex  justify-center  mx-2 items-center   h-[300px]">
+  <div className="detail absolute px-3 py-3 border-2 flex flex-col rounded-[23px] w-[30%] left-0  items-center justify-center   ">
+<h1 className='font-bold text-2xl'>3.WorkManager WebSite</h1>
+<p className='font-bold'>I used Next js  to create this website</p>
+<p className='font-semibold text-sm'> i am using cookeis for authentication,and all the feature is added which is in modern Music web for ex--spotify.com,jiosavan.com...</p>
+<a className='underline font-bold cursor-pointer z-50' href="https://github.com/PrajaRavi/FirstNextApp.git">Github repo</a>
+  </div>
+<div  className="laptop relative  left-[20px]  w-[100%] h-[100%] flex items-center justify-center">
+
+<DeviceFrameset    zoom={active3==false?0.3:0.6}    device="MacBook Pro" color="gold" landscape>
+            {/* <h1 className='font-bold text-5xl py-1 w-[100%] text-center'>Chat App</h1> */}
+            {/* <h2 className='font-bold text-4xl py-1 w-[100%] text-center'>Created using MERN Stack</h2> */}
+            {/* <img onMouseMove={()=>{}} src={ChatWebImage} className='w-[100%]  h-[100%]'  alt="" /> */}
+            <video  onMouseEnter={()=>{setactive3(true)}} onMouseLeave={()=>{setactive3(false)}} onmou src={ToDoAppVideo} loop  autoplay  className='w-[100%] h-[100%] content-center ' muted controls={true}></video>
+        </DeviceFrameset>
+    
+</div>
+
 </div>
       <Fotter position={'relative'} bottom={'0'}/>
 
