@@ -636,7 +636,7 @@ setMouseEnter(false)
 </div>
 <div className="first_Project fp2 relative w-[100%] px-4 py-1  rounded-[23px] transition-all duration-300 flex  justify-center  mx-2 items-center   h-[300px]">
   <div className="detail absolute px-3 py-3 border-2 flex flex-col rounded-[23px] w-[30%] left-0  items-center justify-center   ">
-<h1 className='font-bold text-2xl'>3.WorkManager WebSite</h1>
+<h1 className='font-bold text-2xl'>5.WorkManager WebSite</h1>
 <p className='font-bold'>I used Next js  to create this website</p>
 <p className='font-semibold text-sm'> i am using cookeis for authentication,and all the feature is added which is in modern Music web for ex--spotify.com,jiosavan.com...</p>
 <a className='underline font-bold cursor-pointer z-50' href="https://github.com/PrajaRavi/FirstNextApp.git">Github repo</a>
