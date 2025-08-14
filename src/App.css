@@ -433,3 +433,7 @@ border-bottom: 2px solid;
 .right ul li:hover::before{
   width: 100%;
 }
+.home-container{
+  /* background: linear-gradient(to right top,white 20%,black 20%,white 60%); */
+  /* background: linear-gradient(to right top, 30%,black 30%,white 40%); */
+}

@@ -16,14 +16,48 @@ import EcomWebVideo from "../assets/video/EcomWeb.mp4"
 import BlogWebVideo from "../assets/video/BlogWeb.mp4"
 import MusicWebVideo from "../assets/video/MusicWeb.mp4"
 import ToDoAppVideo from "../assets/video/Todoapp.mp4"
+
+// Adding the card hover effect
+import { CardImage, HoverEffect } from "./CardHoveringEffect";
+ 
 import Fotter from './Fotter'
 import {gsap} from "gsap"
 import {ScrollTrigger} from "gsap/ScrollTrigger"
 import { useGSAP } from '@gsap/react'
 // Adding device mokup
+import { FaMagnifyingGlass } from 'react-icons/fa6'
+import { cn } from "../utils.config";
+import { AnimatePresence, motion } from "motion/react";
+
 import { DeviceFrameset } from 'react-device-frameset'
 import 'react-device-frameset/styles/marvel-devices.min.css'
+ const projects = [
+  {
+    title: "Website Devlopement",
+    description:
+     " Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus magni, sapiente quos accusantium asperiores, modi distinctio dolorem quia ducimus quam recusandae officia tempore labore totam ratione at animi eum vel?",
+      CardImage:<FaLaptopCode/>,
+    // link: "https://stripe.com",
+  },
+  {
+    title: "App Devlopement",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus magni, sapiente quos accusantium asperiores, modi distinctio dolorem quia ducimus quam recusandae officia tempore labore totam ratione at animi eum vel?",
+    // link: "https://netflix.com",
+      CardImage:<BiLogoPlayStore/>,
 
+  },
+  {
+    title: "Ui/Ux Designer",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus magni, sapiente quos accusantium asperiores, modi distinctio dolorem quia ducimus quam recusandae officia tempore labore totam ratione at animi eum vel?",
+
+    // link: "https://google.com",
+      CardImage:<CgWebsite/>,
+
+  },
+  
+];
 const name = "Ravi Prajapati";
 
 export default function Home() {
@@ -486,7 +520,7 @@ const [currentWordIndex, setCurrentWordIndex] = useState(0);
 setMouseEnter(true)
       }} onMouseLeave={()=>{
 setMouseEnter(false)
-      }} onMouseMove={(e)=>{HandleMouse(e)}} className="home-container flex-wrap sm:flex-nowrap  flex items-center px-10     lg:justify-between  justify-center  w-[90%] lg:w-[88%]  min-h-[90vh] my-3">
+      }} onMouseMove={(e)=>{HandleMouse(e)}} className="home-container flex-wrap sm:flex-nowrap  flex items-center px-10     lg:justify-between  justify-center  z-10 w-[90%] lg:w-[88%]  min-h-[90vh] my-3">
 <div className="left flex    flex-col font-bold md:gap-5 gap-2">
 <span className='md:text-3xl text-xl '>Hello, I am,</span>
 <span className='md:text-5xl text-2xl myname1  pb-3'>Ravi Prajapati,</span>
@@ -496,13 +530,22 @@ setMouseEnter(false)
     <span className="cursor">|</span>
      </div>
 <span className='md:text-3xl text-xl '>Bringing your ideas to real word through my skills</span>
-<a href={resume}  className='border-2 z-50 cursor-pointer download gap-3 hover:border-white rounded-[23px] hover:text-white  font-bold border-black px-5 py-2 w-[200px] flex items-center justify-center'  download={"RaviResume"}>Resume<FaDownload/></a>
+{/* <a href={resume}  className='border-2 z-50 cursor-pointer download gap-3 hover:border-white rounded-[23px] hover:text-white  font-bold border-black px-5 py-2 w-[200px] flex items-center justify-center'  download={"RaviResume"}>Resume<FaDownload/></a> */}
 {/* <a href={resume} download={"RaviResume"}>download</a> */}
   {/* <img src={logo} alt="logo "  className='w-[100px] h-[100px] absolute'/> */}
+  <a href={resume} download={"RaviResume"} >
+
+<button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+  <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,white_0%,white_50%,black_100%)]" />
+  <span className="inline-flex h-full lg:w-[300px] w-[200px] cursor-pointer items-center justify-center rounded-full bg-white px-3 py-1 text-sm font-medium text-black backdrop-blur-3xl">
+    Download Resume<FaDownload className=' mx-2  '/>
+  </span>
+</button>
+  </a>
 
 </div>
 
-<div className="right-img -z-30 rounded-[94px] w-[300px] md:w-[400px]  ">
+<div className="right-img z-30 rounded-[94px] w-[300px] md:w-[400px]  ">
   <img  className=' w-[100%]  h-[100%] md:rounded-[94px] rounded-[33px] ' src={logo} alt="" />
   
 </div>
@@ -535,7 +578,11 @@ setMouseEnter(false)
     
   </div>
 </div>
+<div className="skills w-[100%] flex flex-wrap opacity-0 flex-col items-center  px-2 justify-center">
+  <h1 className='font-bold text-3xl text-center border-b-3 pb-2   skill-heading'>My Skills</h1>
 
+  <HoverEffect items={projects}/>
+</div>
 <div className="language w-[100%]  mb-[100px]  flex flex-col opacity-0 cl pb-4 items-center justify-center gap-[10px]">
   <h1 className='font-bold md:text-4xl text-2xl py-2 text-center   border-b-3  my-10 cl-heading'>Computer languages</h1>
   <div className="programm my-[20px] flex flex-wrap gap-[40px] justify-center font-bold text-8xl mb-[20px]">
