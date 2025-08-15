@@ -505,7 +505,7 @@ const [currentWordIndex, setCurrentWordIndex] = useState(0);
           {window.innerWidth>600 &&MouseEnter?positions.map((pos, i) => (
         <span
           key={i}
-          className="absolute text-xl z-10 font-bold text-black"
+          className="absolute text-xl z-50 font-bold text-black"
           style={{
             transform: `translate(${pos.x}px, ${pos.y}px)`,
             transition: "transform 0.1s ease",
