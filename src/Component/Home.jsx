@@ -718,7 +718,7 @@ setMouseEnter(false)
 <h1 className='font-bold text-2xl'>6.ExpenseTracker Website</h1>
 <p className='font-bold'>I used MERN stack to create this website</p>
 <p className='font-semibold text-sm'> i am using cookeis for authentication,one can create blog manuallny as well as with the help of gemini and admin panal also  functionality...</p>
-<a className='underline font-bold cursor-pointer z-50' href="https://github.com/PrajaRavi/MyEcomWeb.git">Github repo</a>
+<a className='underline font-bold cursor-pointer z-50' href="https://github.com/PrajaRavi/ExpenseTracker.git">Github repo</a>
   </div>
 </div>
 
