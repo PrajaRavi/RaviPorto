@@ -644,12 +644,13 @@ setMouseEnter(false)
 <a className='underline font-bold cursor-pointer z-50' href="https://github.com/PrajaRavi/MyEcomWeb.git">Github repo</a>
   </div>
 </div>
+
 <div className="first_Project fp2 relative w-[100%] px-4 py-1  rounded-[23px] transition-all duration-300 flex  justify-center  mx-2 items-center   h-[300px]">
   <div className="detail absolute px-3 py-3 border-2 flex flex-col rounded-[23px] w-[30%] left-0  items-center justify-center   ">
-<h1 className='font-bold text-2xl'>3.Music WebSite</h1>
+<h1 className='font-bold text-2xl'>3.Coming WebSite</h1>
 <p className='font-bold'>I used MERN stack to create this website</p>
-<p className='font-semibold text-sm'> i am using cookeis for authentication,and all the feature is added which is in modern Music web for ex--spotify.com,jiosavan.com...</p>
-<a className='underline font-bold cursor-pointer z-50' href="https://github.com/PrajaRavi/RaviStudio.git">Github repo</a>
+<p className='font-semibold text-sm'> i am using cookeis for authentication,and all the feature Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia fuga autem ipsa a asperiores rem pariatur et fugit velit atque!...</p>
+{/* <a className='underline font-bold cursor-pointer z-50' href="https://github.com/PrajaRavi/RaviStudio.git">Github repo</a> */}
   </div>
 <div  className="laptop relative  left-[20px]  w-[100%] h-[100%] flex items-center justify-center">
 
@@ -657,7 +658,7 @@ setMouseEnter(false)
             {/* <h1 className='font-bold text-5xl py-1 w-[100%] text-center'>Chat App</h1> */}
             {/* <h2 className='font-bold text-4xl py-1 w-[100%] text-center'>Created using MERN Stack</h2> */}
             {/* <img onMouseMove={()=>{}} src={ChatWebImage} className='w-[100%]  h-[100%]'  alt="" /> */}
-            <video  onMouseEnter={()=>{setactive3(true)}} onMouseLeave={()=>{setactive3(false)}} onmou src={MusicWebVideo} loop  autoplay  className='w-[100%] h-[100%] content-center ' muted controls={true}></video>
+            {/* <video  onMouseEnter={()=>{setactive3(true)}} onMouseLeave={()=>{setactive3(false)}} onmou src={MusicWebVideo} loop  autoplay  className='w-[100%] h-[100%] content-center ' muted controls={true}></video> */}
         </DeviceFrameset>
     
 </div>
