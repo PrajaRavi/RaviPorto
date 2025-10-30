@@ -82,7 +82,7 @@ if(second.current.style.opacity==1){
     <>
     <div className="big-container fixed   top-0 z-50 w-[100%] bg-white flex items-center justify-center flex-col gap-4">
 
-    <div className="container  w-[94%] flex items-center justify-between py-2">
+    <div className="container  w-[94%] flex items-center max-w-[1200px] justify-between py-2">
       <Link to={"/"}><div ref={leftref} className="first-nav cursor-pointer flex relative items-center justify-center gap-1">
 
         <img src={logo1} className='w-[40px] h-[40px] rounded-full relative bottom-[5px]' alt="" />
@@ -147,7 +147,7 @@ first.current.style.transform=` rotate(0deg)`;
       
     </div>
     
-<div className="line md:w-[88%] w-[90%] relative top-[50px] mx-auto h-[8px] bg-black">
+<div className="line md:w-[88%] w-[90%] relative top-[50px] max-w-[1200px] mx-auto h-[8px] bg-black">
 
 </div>
     </>

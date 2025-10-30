@@ -504,7 +504,7 @@ const [currentWordIndex, setCurrentWordIndex] = useState(0);
   return (
     <>
           {window.innerWidth>600 &&MouseEnter?positions.map((pos, i) => (
-        <span
+        <h1
           key={i}
           className="absolute text-xl z-50 font-bold text-black"
           style={{
@@ -513,7 +513,7 @@ const [currentWordIndex, setCurrentWordIndex] = useState(0);
           }}
         >
           {name[i]}
-        </span>
+        </h1>
       )):null}
 
     <div className='big-container relative top-[50px]'>
@@ -521,26 +521,25 @@ const [currentWordIndex, setCurrentWordIndex] = useState(0);
 setMouseEnter(true)
       }} onMouseLeave={()=>{
 setMouseEnter(false)
-      }} onMouseMove={(e)=>{HandleMouse(e)}} className="home-container flex-wrap sm:flex-nowrap  flex items-center px-10     lg:justify-between  justify-center  z-10 w-[90%] lg:w-[88%]  min-h-[90vh] my-3">
+      }} onMouseMove={(e)=>{HandleMouse(e)}} className="home-container flex-wrap sm:flex-nowrap  flex items-center px-10     lg:justify-between  justify-center  z-10 w-[90%] lg:w-[88%] max-w-[1200px] min-h-[90vh] my-3">
 <div className="left flex    flex-col font-bold md:gap-5 gap-2">
-<span className='md:text-3xl text-xl '>Hello, I am,</span>
-<span className='md:text-5xl text-2xl myname1  pb-3'>Ravi Prajapati,</span>
-{/* <span className='md:text-4xl text-3xl'>Full Stack Web Devloper</span> */}
+<h1 className='md:text-3xl text-xl '>Hello, I am,</h1>
+<h1 className='md:text-5xl text-2xl myname1  pb-3'>Ravi Prajapati,</h1>
+{/* <h1 className='md:text-4xl text-3xl'>Full Stack Web Devloper</h1> */}
    <div style={window.innerWidth>600?{ fontSize: '2rem',}:{ fontSize: '1.2rem',}} className='myname z-50'>
        {currentText}
-    <span className="cursor">|</span>
      </div>
-<span className='md:text-3xl text-xl '>Bringing your ideas to real word through my skills</span>
+{/* <h1 className='md:text-sm text-sm '>I am a Full Stack Web Devloper | Bringing your ideas to real word through my skills</h1> */}
 {/* <a href={resume}  className='border-2 z-50 cursor-pointer download gap-3 hover:border-white rounded-[23px] hover:text-white  font-bold border-black px-5 py-2 w-[200px] flex items-center justify-center'  download={"RaviResume"}>Resume<FaDownload/></a> */}
 {/* <a href={resume} download={"RaviResume"}>download</a> */}
   {/* <img src={logo} alt="logo "  className='w-[100px] h-[100px] absolute'/> */}
   <a href={resume} download={"RaviResume"} >
 
 <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-  <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,white_0%,white_50%,black_100%)]" />
-  <span className="inline-flex h-full lg:w-[300px] w-[200px] cursor-pointer items-center justify-center rounded-full bg-white px-3 py-1 text-sm font-medium text-black backdrop-blur-3xl">
+  <h1 className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,white_0%,white_50%,black_100%)]" />
+  <h1 className="inline-flex h-full lg:w-[300px] w-[200px] cursor-pointer items-center justify-center rounded-full bg-white px-3 py-1 text-sm font-medium text-black backdrop-blur-3xl">
     Download Resume<FaDownload className=' mx-2  '/>
-  </span>
+  </h1>
 </button>
   </a>
 
@@ -552,10 +551,10 @@ setMouseEnter(false)
 </div>
       
       </div>
-      <div className="container1 w-[88%] ">
+      <div className="container1 w-[88%] max-w-[1200px]">
 
       
-<div className="skills w-[100%] flex flex-wrap opacity-0 flex-col items-center  px-2 justify-center">
+<div className="skills w-[100%] flex flex-wrap  opacity-0 flex-col items-center  px-2 justify-center">
   <h1 className='font-bold text-3xl text-center border-b-3 pb-2   skill-heading'>My Skills</h1>
   <div className="dabba grid md:grid-cols-3 gap-10 my-10">
     <div className="first-skills group cursor-pointer transition-all duration-300 mx-auto    flex items-center justify-center  shadow px-3 py-2 rounded-2xl flex-col gap-5 ">
