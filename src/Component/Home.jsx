@@ -578,11 +578,11 @@ setMouseEnter(false)
     
   </div>
 </div>
-<div className="skills w-[100%] flex flex-wrap opacity-0 flex-col items-center  px-2 justify-center">
+{/* <div className="skills w-[100%] flex flex-wrap opacity-0 flex-col items-center  px-2 justify-center">
   <h1 className='font-bold text-3xl text-center border-b-3 pb-2   skill-heading'>My Skills</h1>
 
   <HoverEffect items={projects}/>
-</div>
+</div> */}
 <div className="language w-[100%]  mb-[100px]  flex flex-col opacity-0 cl pb-4 items-center justify-center gap-[10px]">
   <h1 className='font-bold md:text-4xl text-2xl py-2 text-center   border-b-3  my-10 cl-heading'>Computer languages</h1>
   <div className="programm my-[20px] flex flex-wrap gap-[40px] justify-center font-bold text-8xl mb-[20px]">
@@ -602,8 +602,8 @@ setMouseEnter(false)
   </div>
 
 </div>
-{
-  navigator.userAgent.includes("Windows")?<div className="myproject w-[100%] flex flex-col items-center justify-start h-screen border-">
+{window.innerWidth>600?
+  <div className="myproject w-[100%] flex flex-col items-center justify-start min-h-screen ">
 <h1 className='font-bold text-3xl  py-1 w-[220px] text-center border-b-3 opacity-0 mpheading'>My Projects</h1>
 <div className="first_Project fp  relative w-[100%] px-4 py-1  rounded-[23px] transition-all duration-300 flex  justify-center  mx-2 items-center   h-[300px]">
   <div className="detail absolute px-3 py-3 border-2 flex flex-col rounded-[23px] w-[30%] left-0  items-center justify-center  ">
@@ -612,7 +612,7 @@ setMouseEnter(false)
 <p className='font-semibold text-sm'> i am using cookeis for authentication,and also i had added privacy mode also whre message will not be save in database...</p>
 <a className='underline font-bold cursor-pointer z-50' href="https://github.com/PrajaRavi/MyChatApp.git">Github repo</a>
   </div>
-<div  className="laptop  relative  left-[30px]  w-[100%] h-[100%] flex items-center justify-center">
+<div  className={window.innerWidth>600?"laptop  relative  left-[30px]  w-[100%] h-[100%] flex items-center justify-center":"laptop  relative  left-[30px]  w-[100%] h-[100%] flex items-center justify-center"}>
 
 <DeviceFrameset    zoom={active==false?0.3:0.6}    device="MacBook Pro" color="gold" landscape>
             {/* <h1 className='font-bold text-5xl py-1 w-[100%] text-center'>Chat App</h1> */}
@@ -725,7 +725,34 @@ setMouseEnter(false)
       <Fotter position={'relative'} bottom={'0'}/>
 
 </div>
-:null
+:
+  <div className="myproject w-[100%] flex flex-col items-center justify-start h-screen ">
+<h1 className='font-bold text-3xl  py-1 w-[220px] text-center border-b-3 opacity-0 mpheading mb-10'>My Projects</h1>
+    <div className="project-div my-2 ">
+ <div className=" px-3 py-3 border-2 flex flex-col rounded-[23px] w-[96%] min-w-[200px]   items-center justify-center  ">
+<h1 className='font-bold text-2xl'>1.Chat WebSite</h1>
+<p className='font-bold'>I used MERN stack to create this website</p>
+<p className='font-semibold text-sm'> i am using cookeis for authentication,and also i had added privacy mode also whre message will not be save in database...</p>
+<a className='underline font-bold cursor-pointer z-50' href="https://github.com/PrajaRavi/MyChatApp.git">Github repo</a>
+</div>
+    </div>
+    <div className="project-div my-2 ">
+ <div className=" px-3 py-3 border-2 flex flex-col rounded-[23px] w-[96%] min-w-[200px]   items-center justify-center  ">
+<h1 className='font-bold text-2xl'>2.Ecom Website</h1>
+<p className='font-bold'>I used MERN stack to create this website</p>
+<p className='font-semibold text-sm'> i am using cookeis for authentication,and also i had added privacy mode also whre message will not be save in database...</p>
+<a className='underline font-bold cursor-pointer z-50' href="https://github.com/PrajaRavi/MyEcomWeb.git">Github repo</a>
+</div>
+    </div>
+    <div className="project-div my-2 ">
+ <div className=" px-3 py-3 border-2 flex flex-col rounded-[23px] w-[96%] min-w-[200px]   items-center justify-center  ">
+<h1 className='font-bold text-2xl'>4.ExpenseTracker</h1>
+<p className='font-bold'>I used MERN stack to create this website</p>
+<p className='font-semibold text-sm'> i am using cookeis for authentication,and also i had added privacy mode also whre message will not be save in database...</p>
+<a className='underline font-bold cursor-pointer z-50' href="https://github.com/PrajaRavi/ExpenseTracker.git">Github repo</a>
+</div>
+    </div>
+    </div>
 }
 
 </div>
