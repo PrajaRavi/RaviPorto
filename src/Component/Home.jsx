@@ -1,6 +1,6 @@
 
 import React, { useEffect, useRef, useState } from 'react'
-import logo from '../assets/banda.webp'
+import logo from '../assets/code1.jpeg'
 import "../App.css"
 import{FaLaptopCode,FaCss3,FaJs,FaNodeJs,FaReact, FaHtml5,FaPython, FaAngular, FaDownload} from 'react-icons/fa'
 import{BiLogoPlayStore,BiLogoCPlusPlus, BiLogoPython} from 'react-icons/bi'
