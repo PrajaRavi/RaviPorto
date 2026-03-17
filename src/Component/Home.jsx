@@ -1,6 +1,6 @@
 
 import React, { useEffect, useRef, useState } from 'react'
-import logo from '../assets/code1.jpeg'
+import logo from '../assets/banda1.webp'
 import "../App.css"
 import{FaLaptopCode,FaCss3,FaJs,FaNodeJs,FaReact, FaHtml5,FaPython, FaAngular, FaDownload} from 'react-icons/fa'
 import{BiLogoPlayStore,BiLogoCPlusPlus, BiLogoPython} from 'react-icons/bi'
@@ -538,7 +538,7 @@ setMouseEnter(false)
 <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
   <h1 className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,white_0%,white_50%,black_100%)]" />
   <h1 className="inline-flex h-full lg:w-[300px] w-[200px] cursor-pointer items-center justify-center rounded-full bg-white px-3 py-1 text-sm font-medium text-black backdrop-blur-3xl">
-    Download Resume<FaDownload className=' mx-2  '/>
+    Le lo shalo!!!!🤣🤣🤣🤣<FaDownload className=' mx-2  '/>
   </h1>
 </button>
   </a>

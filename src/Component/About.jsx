@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../assets/code1.jpeg'
+import logo from '../assets/banda1.webp'
 import Fotter from './Fotter'
 export default function About() {
   return (
