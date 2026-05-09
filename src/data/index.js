@@ -1,3 +1,11 @@
+import ReactICon from "../assets/react.png"
+import NestIcon from "../assets/node-js-icon.png"
+import MongodbIcon from "../assets/mongodb-icon.png"
+import MusicwebVideo from "../assets/video/MusicWeb.mp4"
+import ExpenseTracker from "../assets/video/ExpenseTracker.mp4"
+import NginxIcon from "../assets/nginx-icon.png"
+import redisicon from "../assets/redis-512px.png"
+
 export const navLinks = [
   "Home",
   "About",
@@ -8,10 +16,10 @@ export const navLinks = [
 ];
 
 export const techStack = [
-  { name: "React", sub: "Frontend", icon: "../src/assets/react.png" },
-  { name: "Express.js", sub: "Backend", icon: "../src/assets/node-js-icon.png" },
-  { name: "Node.js", sub: "Runtime", icon: "../src/assets/node-js-icon.png" },
-  { name: "MongoDB", sub: "Database", icon: "../src/assets/mongodb-icon.png"},
+  { name: "React", sub: "Frontend", icon:ReactICon },
+  { name: "Express.js", sub: "Backend", icon: NestIcon },
+  { name: "Node.js", sub: "Runtime", icon: NestIcon },
+  { name: "MongoDB", sub: "Database", icon: MongodbIcon},
 ];
 
 export const projects = [
@@ -21,7 +29,7 @@ export const projects = [
     tags: ["MERN", "Redux", "Tailwind", "Socket.IO", "JWT"],
     stars: "1",
     color: "#1DB954",
-    src:"../src/assets/video/MusicWeb.mp4"
+    src:MusicwebVideo
   },
   {
     title: "Expense Tracker",
@@ -29,7 +37,7 @@ export const projects = [
     tags: ["MERN", "Socket.IO", "JWT","rechart.js","Redux"],
     stars: "1k",
     color: "#61dafb",
-    src:"../src/assets/video/ExpenseTracker.mp4"
+    src:ExpenseTracker
   },
   {
     title: "E-Commerce",
@@ -55,11 +63,11 @@ export const stats = [
 ];
 
 export const architecture = [
-  { name: "Client", sub: "React App", icon:"../src/assets/react.png"  },
-  { name: "Nginx", sub: "Load Balancer", icon: "../src/assets/nginx-icon.png" },
-  { name: "Node.js", sub: "Express Server", icon: "../src/assets/node-js-icon.png" },
-  { name: "Redis", sub: "Cache", icon: "../src/assets/redis-512px.png" },
-  { name: "MongoDB", sub: "Database", icon: "../src/assets/mongodb-icon.png"},
+  { name: "Client", sub: "React App", icon:ReactICon  },
+  { name: "Nginx", sub: "Load Balancer", icon: NginxIcon },
+  { name: "Node.js", sub: "Express Server", icon: NestIcon },
+  { name: "Redis", sub: "Cache", icon: redisicon },
+  { name: "MongoDB", sub: "Database", icon: MongodbIcon},
 ];
 
 export const archFeatures = [
