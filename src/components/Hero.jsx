@@ -146,6 +146,19 @@ let [showTerminal,setshowTerminal]=useState(false)
                 View Projects
               </button>
               <button
+                className="px-6 py-3 rounded-xl font-bold text-sm transition-all hover:scale-105 hover:shadow-lg"
+                style={{ background: "var(--accent)", color: "var(--bg)" }}
+                
+              >
+                <a href="https://ik.imagekit.io/k5imwrh1hh/rag_documents/All_Iot_practical.pdf">IOT practical</a>
+              </button>
+              <button
+                className="px-6 py-3 rounded-xl font-bold text-sm transition-all hover:scale-105 hover:shadow-lg"
+                style={{ background: "var(--accent)", color: "var(--bg)" }}
+              >
+                <a href="https://drive.google.com/drive/folders/1NfZxAIcIV6WfC3QcUHwrC4CbRi3t4ZaK">DBMS practical</a>
+              </button>
+              <button
                 className="px-6 py-3 rounded-xl font-bold text-sm border transition-all hover:scale-105"
                 style={{
                   borderColor: "var(--accent)",
