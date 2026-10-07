@@ -2,8 +2,10 @@ import ReactICon from "../assets/react.png"
 import NestIcon from "../assets/node-js-icon.png"
 import MongodbIcon from "../assets/mongodb-icon.png"
 import MusicwebVideo from "../assets/video/MusicWeb.mp4"
-import ExpenseTracker from "../assets/video/ExpenseTracker.mp4"
+import ExpenseTracker from "../assets/video/wc.mp4"
 import NginxIcon from "../assets/nginx-icon.png"
+import prodRagVideo from "../assets/video/prodrag.mp4"
+import TruthlensVideo from "../assets/video/Truthlens.mp4"
 import redisicon from "../assets/redis-512px.png"
 
 export const navLinks = [
@@ -28,30 +30,39 @@ export const projects = [
     desc: "Music streaming app with authentication, playlists, real-time search and premium features.",
     tags: ["MERN", "Redux", "Tailwind", "Socket.IO", "JWT"],
     stars: "1",
+    git:"https://github.com/PrajaRavi/ravistudio_micro_service",
     color: "#1DB954",
     src:MusicwebVideo
   },
   {
-    title: "Expense Tracker",
-    desc: "Expense Tracker website for tracking user expense and income with admin panel.",
+    title: "WhatsApp Clone",
+    desc: "Whatsapp clone website for gain practical experince of websocket.",
     tags: ["MERN", "Socket.IO", "JWT","rechart.js","Redux"],
-    stars: "1k",
+    stars: "0k",
+    git:"https://github.com/PrajaRavi/WhatsAppClone.git",
     color: "#61dafb",
     src:ExpenseTracker
   },
   {
-    title: "E-Commerce",
+    title: "prodRag",
     desc: "Full-featured e-commerce platform with Razorpay payments and admin panel.",
-    tags: ["MERN", "Razorpay", "Cloudinary"],
-    stars: "1.8k",
+    tags: ["RAG","Agents","Langchain","LangGraph"],
+    stars: "0k",
+    git:"https://github.com/PrajaRavi/prodRAG.git",
+    demo:"https://prodrag-2.onrender.com/",
     color: "#f97316",
+    src:prodRagVideo
+
   },
   {
-    title: "Task Manager",
-    desc: "Collaborative task management app with boards and analytics.",
-    tags: ["MERN", "Socket.IO", "Charts"],
-    stars: "1.3k",
+    title: "TruthLensAI-misinformation detection system",
+    desc: "Misinformation analysis platform",
+    tags: ["AI","Gemini","Groq","LangChain","LangGraph"],
+    stars: "0k",
+    git:"https://github.com/PrajaRavi/TruthLens-AI-Misinformation-Intelligence.git",
+    demo:"https://truthlensai-vqrl.onrender.com/",
     color: "#a855f7",
+    src:TruthlensVideo
   },
 ];
 

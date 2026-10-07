@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { projects } from "../data";
-import MusicWeb from "../assets/video/MusicWeb.mp4"
-import ExpenseTracker from "../assets/video/ExpenseTracker.mp4"
+// import MusicWeb from "../assets/video/MusicWeb.mp4"
+// import ExpenseTracker from "../assets/video/ExpenseTracker.mp4"
 function ProjectCard({ project, index, visible }) {
   const [hovered, setHovered] = useState(false);
 
@@ -68,18 +68,20 @@ function ProjectCard({ project, index, visible }) {
 
         <div className="flex items-center justify-between pt-1">
           <div className="flex gap-2">
-            <button
+            <a
+            href={project.demo}
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all hover:opacity-80"
               style={{ background: project.color, color: "#000" }}
             >
               ▶ Live Demo
-            </button>
-            <button
+            </a>
+            <a
+            href={project.git}
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold border transition-all hover:scale-105"
               style={{ borderColor: "var(--border)", color: "var(--text)", background: "transparent" }}
             >
               GitHub
-            </button>
+            </a>
           </div>
           <span className="text-xs font-mono" style={{ color: "var(--textMuted)" }}>
             ⭐ {project.stars}
