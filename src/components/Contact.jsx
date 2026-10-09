@@ -61,11 +61,11 @@ export default function Contact() {
             <div className="border-t pt-4 mt-4 space-y-3" style={{ borderColor: "var(--border)" }}>
               <div className="flex items-center gap-3">
                 <span>📧</span>
-                <span style={{ color: "var(--text)" }}>hello@raviPrajapati.dev</span>
+                <span style={{ color: "var(--text)" }}>mechraviprajapati@gmail.com</span>
               </div>
               <div className="flex items-center gap-3">
                 <span>📱</span>
-                <span style={{ color: "var(--text)" }}>+91 9161162317</span>
+                <span style={{ color: "var(--text)" }}>+91 9769479166</span>
               </div>
               <div className="flex items-center gap-3">
                 <span>📍</span>
@@ -93,7 +93,7 @@ export default function Contact() {
                   }}
                   title={s}
                 >
-                  <a href={i==0?"https://github.com/prajaravi":i==1?"https://google.com":i==2?"https://github.com/prajaravi":"https://github.com/prajaravi"}>{["⌥", "in", "𝕏", "✉"][i]}</a>
+                  <a href={i==0?"https://github.com/prajaravi":i==1?"https://www.linkedin.com/in/ravi-prajapati-7a0397368":i==2?"https://github.com/prajaravi":"mechraviprajapati@gmail.com"}>{["⌥", "in", "𝕏", "✉"][i]}</a>
                 </button>
               ))}
             </div>
